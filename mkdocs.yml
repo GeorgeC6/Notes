@@ -1,0 +1,95 @@
+site_name: Mkdocs Test
+site_author: George Cao
+site_description: A test website for Mkdocs
+
+repo_name: Mkdocs-test
+repo_url: https://github.com/GeorgeC6/Mkdocs-test
+
+copyright: Copyright &copy; 2024 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
+
+theme:
+  name: material
+  language: zh
+  features:
+    - header.autohide
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GeorgeC6
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCq09adFYMyB4gRaUFYnVmhQ
+    - icon: fontawesome/brands/soundcloud
+      link: https://soundcloud.com/gorco
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/413263041
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.mark:
+      smart_mark: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - footnotes
+  - md_in_html
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 主页: "index.md"
+  - 数学:
+    - "微积分（甲）I": "Math/Calculus I/intro.md"
+    - "微积分（甲）II": "Math/Calculus II/intro.md"
+    - "线性代数": "Math/Linear Algebra/intro.md"
+    - "Special Functions: From Combanitorics to Calculus": "Math/Special Functions: From Combanitorics to Calculus/intro.md"
+  - 物理:
+    - "大学物理（甲）I": "Physics/Physics I/intro.md"
+    
+  - 计算机科学:
+    - Python: "CS/Python/Python 学习笔记.md"
+    - C: "CS/C/C 学习笔记/C 学习笔记.md"
