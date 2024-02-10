@@ -83,7 +83,7 @@ nav:
     - "微积分（甲）I": "Math/Calculus I/intro.md"
     - "微积分（甲）II": "Math/Calculus II/intro.md"
     - "线性代数": "Math/Linear Algebra/intro.md"
-    - "Special Functions: From Combanitorics to Calculus": "Math/Special Functions: From Combanitorics to Calculus/intro.md"
+    - "Special Functions: From Combinatorics to Calculus": "Math/Special Functions: From Combinatorics to Calculus/intro.md"
   
   - 物理:
     - "大学物理（甲）I": "Physics/Physics I/intro.md"
