@@ -1,5 +1,6 @@
 site_name: Mkdocs Test
 site_author: George Cao
+#site_url: https://georgecao.tech/Mkdocs-test/
 site_description: A test website for Mkdocs
 
 repo_name: Mkdocs-test
@@ -10,13 +11,20 @@ copyright: Copyright &copy; 2024 <a href="https://github.com/GeorgeC6" target="_
 theme:
   name: material
   language: zh
+  static_templates:
+    - 404.html
+  favicon: images/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: overrides
   features:
     - header.autohide
     - navigation.tracking
     - navigation.tabs
-    - navigation.sections
+#    - navigation.sections
     - navigation.top
     - toc.integrate
+    - toc.follow
     - search.highlight
     - search.share
     - search.suggest
@@ -44,9 +52,6 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-  icon:
-    repo: fontawesome/brands/github
-
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -58,6 +63,21 @@ extra:
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/413263041
 
+#  analytics:
+#    - provider: google
+#    - property: 
+#    feedback:
+#      title: Was this page helpful?
+#      ratings:
+#        - icon: material/emoticon-happy-outline
+#          name: This page was helpful
+#          data: 1
+#          note: Thanks for your feedback!
+#        - icon: material/emoticon-sad-outline
+#          name: This page could be improved
+#          data: 0
+#          note: Thanks for your feedback!
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -65,8 +85,16 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.tilde
   - pymdownx.mark:
       smart_mark: true
   - pymdownx.emoji:
@@ -76,6 +104,15 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - attr_list
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML # MathJax v2, 这个js绝了！别的加了好像也没什么用
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - 主页: "index.md"
@@ -83,11 +120,22 @@ nav:
     - "微积分（甲）I": "Math/Calculus I/intro.md"
     - "微积分（甲）II": "Math/Calculus II/intro.md"
     - "线性代数": "Math/Linear Algebra/intro.md"
-    - "Special Functions: From Combinatorics to Calculus": "Math/Special Functions: From Combinatorics to Calculus/intro.md"
+    - "Special Functions: From Combinatorics to Calculus": 
+      - Intro: "Math/Special Functions: From Combinatorics to Calculus/intro.md"
+      - Week 1: "Math/Special Functions: From Combinatorics to Calculus/Week 1/index.md"
   
   - 物理:
     - "大学物理（甲）I": "Physics/Physics I/intro.md"
     
-  - 计算机科学:
-    - Python: "CS/Python/Python 学习笔记.md"
-    - C: "CS/C/C 学习笔记/C 学习笔记.md"
+  - 编程语言:
+    - Python: 
+      - 前言: "Programming Language/Python/intro.md"
+      - 第零章 Python拾级: "Programming Language/Python/Chapter 0.md"
+      - 第一章 数据类型与运算符: "Programming Language/Python/Chapter 1.md"
+      - 第二章 常用函数: "Programming Language/Python/Chapter 2.md"
+      - 第三章 条件和循环: "Programming Language/Python/Chapter 3.md"
+      - 第四章 算法简介: "Programming Language/Python/Chapter 4.md"
+    
+    - C: "Programming Language/C/C 学习笔记.md"
+
+    - LaTeX: "Programming Language/LaTeX/intro.md"
