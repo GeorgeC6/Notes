@@ -1,9 +1,9 @@
-# 欢迎来到我的云知识库！:cloud:
+# **欢迎来到我的云知识库！:material-cloud:**
 
 这里是我所有电子版笔记和课程相关资源的汇总。
 
 !!! info "Tips"
-    若有错误之处或可以改进的地方，欢迎指出！
+    若有错误之处或可以改进的地方，欢迎指出！:octicons-heart-fill-24:{ .heart }
 
 ## Commands
 

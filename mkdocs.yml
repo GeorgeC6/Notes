@@ -15,6 +15,7 @@ theme:
     - 404.html
   favicon: images/favicon.ico
   icon:
+    logo: material/bookshelf
     repo: fontawesome/brands/github
   custom_dir: overrides
   features:
@@ -109,11 +110,19 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
+plugins:
+  - search
+  - minify:
+      minify_html: true # 好像能加快网页加载速度？!
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML # MathJax v2, 这个js绝了！别的加了好像也没什么用
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - 主页: "index.md"
@@ -147,3 +156,8 @@ nav:
     - C: "Programming Language/C/C 学习笔记.md"
 
     - LaTeX: "Programming Language/LaTeX/intro.md"
+
+  - 音乐:
+    - "Music/index.md"
+    - "音乐理论": "Music/Music Theory/index.md"
+    - "音乐制作": "Music/Music Production/index.md"

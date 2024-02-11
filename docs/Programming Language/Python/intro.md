@@ -12,4 +12,4 @@ To be continued...
 
 
 <div align="right"> <font size=4><i><b>by</b></i></font> </div>
-![George Sig.](George Sig. Simple(Trans).png)
+![zoomify](George Sig. Simple(Trans).png){.small}
