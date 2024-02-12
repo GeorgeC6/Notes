@@ -4,5 +4,5 @@
 
 一些资料：
 
-1. [The Art of Linear Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra)
-2. [The Essence of Linear Algebra](https://www.bilibili.com/video/BV1ys411472E/)
+1. :fontawesome-brands-github: [The Art of Linear Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra), Kenji Hiranabe
+2. :fontawesome-brands-bilibili:{.bilibili} [The Essence of Linear Algebra](https://www.bilibili.com/video/BV1ys411472E/), 3Blue1Brown

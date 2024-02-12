@@ -14,6 +14,7 @@ theme:
   static_templates:
     - 404.html
   favicon: images/favicon.ico
+#  apple-touch-icon: images/Just LOGO.png
   icon:
     logo: material/bookshelf
     repo: fontawesome/brands/github
@@ -155,7 +156,9 @@ nav:
     
     - C: "Programming Language/C/C 学习笔记.md"
 
-    - LaTeX: "Programming Language/LaTeX/intro.md"
+    - LaTeX: 
+      - "Programming Language/LaTeX/index.md"
+      - 资料: "Programming Language/LaTeX/Resouces/index.md"
 
   - 音乐:
     - "Music/index.md"

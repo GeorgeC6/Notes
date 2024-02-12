@@ -12,4 +12,5 @@ To be continued...
 
 
 <div align="right"> <font size=4><i><b>by</b></i></font> </div>
-![zoomify](George Sig. Simple(Trans).png){.small}
+
+![alt text](George Sig. Simple(Trans).png){ .small }
