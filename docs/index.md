@@ -5,6 +5,13 @@
 !!! info "Tips"
     若有错误之处或可以改进的地方，欢迎指出！:octicons-heart-fill-24:{ .heart }
 
+## 许可
+
+由我自己编写的部分依照 [MIT LICENSE](https://www.tawesoft.co.uk/kb/article/mit-license-faq)。
+
+其余部分（包括但不限于课程资源、开源书籍以及视频内容）遵循原作者规定的许可。
+
+<!--
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
@@ -18,3 +25,4 @@
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+-->
