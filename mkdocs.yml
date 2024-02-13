@@ -1,10 +1,10 @@
 site_name: George 的知识库
 site_author: George Cao
-#site_url: https://georgecao.tech/Mkdocs-test/
+site_url: https://georgec6.github.io/Mkdocs-test/
 site_description: George's knowledge base
 
-repo_name: Mkdocs-test
-repo_url: https://github.com/GeorgeC6/Mkdocs-test
+#repo_name: Mkdocs-test
+#repo_url: https://github.com/GeorgeC6/Mkdocs-test
 
 copyright: Copyright &copy; 2024 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
 
@@ -69,6 +69,7 @@ extra:
   analytics:
     provider: google
     property: G-BKHW17C33B
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
