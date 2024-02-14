@@ -91,7 +91,7 @@ markdown_extensions:
       smart_mark: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg 
   - admonition
   - footnotes
   - md_in_html
@@ -119,35 +119,35 @@ nav:
   - 数学:
     - "微积分（甲）I": "Math/Calculus I/intro.md"
     - "微积分（甲）II": "Math/Calculus II/intro.md"
-    - "线性代数": "Math/Linear Algebra/intro.md"
+    - "线性代数": "Math/Linear-Algebra/intro.md"
     - "Special Functions: From Combinatorics to Calculus": 
-      - "Math/Special Functions: From Combinatorics to Calculus/index.md"
-      - "Week 1: Bernoulli Polynomials": "Math/Special Functions: From Combinatorics to Calculus/Week 1/index.md"
-      - "Week 2: Bernoulli Numbers & Generating Function": "Math/Special Functions: From Combinatorics to Calculus/Week 2/index.md"
-      - "Week 3: Taylor Polynomials & Taylor Series": "Math/Special Functions: From Combinatorics to Calculus/Week 3/index.md"
-      - "Week 4: The Zeta Function": "Math/Special Functions: From Combinatorics to Calculus/Week 4/index.md"
-      - "Week 5: The Gamma Function": "Math/Special Functions: From Combinatorics to Calculus/Week 5/index.md"
-      - "Week 6: Convexity of Gamma Function": "Math/Special Functions: From Combinatorics to Calculus/Week 6/index.md"
-      - "Week 7: Applications of Gamma Function": "Math/Special Functions: From Combinatorics to Calculus/Week 7/index.md"
-      - "Week 8: Approximation of Gamma Function": "Math/Special Functions: From Combinatorics to Calculus/Week 8/index.md"
+      - "Math/Special-Functions/index.md"
+      - "Week 1: Bernoulli Polynomials": "Math/Special-Functions/Week 1/index.md"
+      - "Week 2: Bernoulli Numbers & Generating Function": "Math/Special-Functions/Week 2/index.md"
+      - "Week 3: Taylor Polynomials & Taylor Series": "Math/Special-Functions/Week 3/index.md"
+      - "Week 4: The Zeta Function": "Math/Special-Functions/Week 4/index.md"
+      - "Week 5: The Gamma Function": "Math/Special-Functions/Week 5/index.md"
+      - "Week 6: Convexity of Gamma Function": "Math/Special-Functions/Week 6/index.md"
+      - "Week 7: Applications of Gamma Function": "Math/Special-Functions/Week 7/index.md"
+      - "Week 8: Approximation of Gamma Function": "Math/Special-Functions/Week 8/index.md"
   
   - 物理:
     - "大学物理（甲）I": "Physics/Physics I/intro.md"
     
   - 编程语言:
     - Python: 
-      - 前言: "Programming Language/Python/intro.md"
-      - 第零章 Python拾级: "Programming Language/Python/Chapter 0.md"
-      - 第一章 数据类型与运算符: "Programming Language/Python/Chapter 1.md"
-      - 第二章 常用函数: "Programming Language/Python/Chapter 2.md"
-      - 第三章 条件和循环: "Programming Language/Python/Chapter 3.md"
-      - 第四章 算法简介: "Programming Language/Python/Chapter 4.md"
+      - 前言: "Prog-lang/Python/intro.md"
+      - 第零章 Python拾级: "Prog-lang/Python/Chapter 0.md"
+      - 第一章 数据类型与运算符: "Prog-lang/Python/Chapter 1.md"
+      - 第二章 常用函数: "Prog-lang/Python/Chapter 2.md"
+      - 第三章 条件和循环: "Prog-lang/Python/Chapter 3.md"
+      - 第四章 算法简介: "Prog-lang/Python/Chapter 4.md"
     
-    - C: "Programming Language/C/C 学习笔记.md"
+    - C: "Prog-lang/C/C 学习笔记.md"
 
     - LaTeX: 
-      - "Programming Language/LaTeX/index.md"
-      - 资料: "Programming Language/LaTeX/Resouces/index.md"
+      - "Prog-lang/LaTeX/index.md"
+      - 资料: "Prog-lang/LaTeX/Resources/index.md"
 
   - 音乐:
     - "Music/index.md"
