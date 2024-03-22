@@ -4,4 +4,4 @@
 
 ## 最近在听的歌
 
-<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/die-alone/1735322545?i=1735322547"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5eRVs0QyysvRSS8hwTsJJQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
