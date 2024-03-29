@@ -110,10 +110,9 @@ plugins:
       minify_html: true # 好像能加快网页加载速度？!
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML # MathJax v2, 这个js绝了！别的加了好像也没什么用
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js # MathJax 3
+  - http://tikzjax.com/v1/tikzjax.js
 
 extra_css:
   - stylesheets/extra.css
@@ -121,8 +120,13 @@ extra_css:
 nav:
   - 主页: "index.md"
   - 数学:
-    - "微积分（甲）I": "Math/Calculus I/intro.md"
-    - "微积分（甲）II": "Math/Calculus II/intro.md"
+    - "微积分（甲）I":
+      - "Math/Calculus I/index.md"
+    - "微积分（甲）II": 
+      - "Math/Calculus II/index.md"
+      - "专题讨论": 
+        - "Math/Calculus II/专题讨论/index.md"
+        - "关于级数1/n^2的讨论": "Math/Calculus II/专题讨论/关于级数1:n^2的讨论.md"
     - "线性代数": "Math/Linear-Algebra/intro.md"
     - "Special Functions: From Combinatorics to Calculus": 
       - "Math/Special-Functions/index.md"
