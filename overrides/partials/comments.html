@@ -1,3 +1,6 @@
+<!-- set show comments to default-->
+{% if page.meta.comments == null %}
+
 <!-- Insert generated snippet here -->
 <script src="https://giscus.app/client.js"
         data-repo="GeorgeC6/Mkdocs-test"
@@ -50,3 +53,4 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 </script>
+{% endif %}

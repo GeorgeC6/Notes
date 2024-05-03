@@ -92,11 +92,14 @@ ValueError: invalid literal for int() with base 10: '10.0'  # (1)
   >>>"Hello"+" "+"World!"
      'Hello World!'
   ```
+
 - **数乘**
+
   ```python
   >>>'哈'*3
      '哈哈哈'
   ```
+
 - **索引**
   
   |字符串中元素|1|2|3|...|n|
@@ -105,6 +108,7 @@ ValueError: invalid literal for int() with base 10: '10.0'  # (1)
   |负索引|-n|...|-3|-2|-1|
 
 - **切片**
+
 ```python
 [start:end:step] #start省略默认为0（step为正时）
 ```

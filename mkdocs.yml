@@ -14,19 +14,18 @@ theme:
   static_templates:
     - 404.html
   favicon: images/favicon.ico
-#  apple-touch-icon: images/Just LOGO.png
+  # apple-touch-icon: images/Just LOGO.png
   icon:
     logo: material/bookshelf
     repo: fontawesome/brands/github
   custom_dir: overrides
   features:
     - header.autohide # 向下滚动时自动隐藏header
-    - navigation.tracking # 导航栏跟踪滚动
+    - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
     - navigation.tabs
-#    - navigation.sections
     - navigation.top
     - navigation.indexes  # 点击小节名字自动显示 index 界面
-    - toc.integrate
+    - toc.integrate   # 文档 toc 集成到总目录中
     - toc.follow  # 右侧目录跟随滚动
     - search.highlight
     - search.share
@@ -37,14 +36,14 @@ theme:
     - announce.dismiss
 
   palette:
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: light)"  # 浅色模式
       scheme: default
       primary: orange
       accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme: dark)"   # 深色模式
       scheme: slate
       primary: green
       accent: lime
@@ -96,26 +95,29 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - admonition
   - footnotes
   - md_in_html
   - attr_list
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 4
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true # 好像能加快网页加载速度？!
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js # MathJax 3
-  - http://tikzjax.com/v1/tikzjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js   # MathJax 3
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/custom.css
 
 nav:
   - 主页: "index.md"
@@ -155,6 +157,8 @@ nav:
 
     - LaTeX: 
       - "Prog-lang/LaTeX/index.md"
+      - Beamer: "Prog-lang/LaTeX/Beamer/index.md"
+      - TikZ: "Prog-lang/LaTeX/TikZ/index.md"
       - 资料: "Prog-lang/LaTeX/Resources/index.md"
 
   - 音乐:
