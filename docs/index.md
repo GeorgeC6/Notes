@@ -9,6 +9,10 @@ comments: false
 !!! info "Tips"
     若有错误之处或可以改进的地方，欢迎指出！:octicons-heart-fill-24:{ .heart }
 
+    ![](images/tieba/huaji.png)
+    ![](images/tieba/happy.png)
+    ![](images/tieba/mua.png)
+
 ## 许可
 
 由我自己编写的部分依照 [MIT LICENSE](https://www.tawesoft.co.uk/kb/article/mit-license-faq)。
