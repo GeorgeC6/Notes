@@ -157,7 +157,11 @@ nav:
   
   - 物理:
     - "物理": "Physics/Physics I/intro.md"
-    
+  
+  - 数理杂谈:
+    - "MathPhy/index.md"
+    - "数学物理方法": "MathPhy/Math4Phy/index.md"
+
   - 编程语言:
     - Python: 
       - 前言: "Prog-lang/Python/intro.md"
