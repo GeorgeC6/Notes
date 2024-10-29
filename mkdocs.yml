@@ -136,15 +136,15 @@ extra_css:
 nav:
   - 主页: "index.md"
   - 数学:
-    - "微积分 I":
+    - 微积分 I:
       - "Math/Calculus I/index.md"
-    - "微积分 II": 
+    - 微积分 II: 
       - "Math/Calculus II/index.md"
       - "专题讨论": 
         - "Math/Calculus II/专题讨论/index.md"
         - "关于级数1/n^2的讨论": "Math/Calculus II/专题讨论/关于级数1:n^2的讨论.md"
-    - "线性代数": "Math/Linear-Algebra/intro.md"
-    - "Special Functions: From Combinatorics to Calculus": 
+    - 线性代数: "Math/Linear-Algebra/intro.md"
+    - "Special Functions: From Combinatorics to Calculus":
       - "Math/Special-Functions/index.md"
       - "Week 1: Bernoulli Polynomials": "Math/Special-Functions/Week 1/index.md"
       - "Week 2: Bernoulli Numbers & Generating Function": "Math/Special-Functions/Week 2/index.md"
@@ -183,3 +183,18 @@ nav:
     - "Music/index.md"
     - "音乐理论": "Music/Music Theory/index.md"
     - "音乐制作": "Music/Music Production/index.md"
+
+  - 其它课程:
+    - "Others/index.md"
+    - 统计与大数据分析: 
+      - "Others/Stat & Data/index.md"
+      - 绪论: "Others/Stat & Data/Lec 1.md"
+      - Python 基础: "Others/Stat & Data/Lec 2.md"
+      - 样本空间与概率 Pt.I: "Others/Stat & Data/Lec 3.md"
+      - 样本空间与概率 Pt.II: "Others/Stat & Data/Lec 4.1.md"
+      - 概率论初步: "Others/Stat & Data/Lec 4.2.md"
+      - 离散型随机变量: "Others/Stat & Data/Lec 5.md"
+      - 连续型随机变量: "Others/Stat & Data/Lec 6.md"
+      - 特殊函数及参数估计: "Others/Stat & Data/Lec 7.md"
+      - 参数估计: "Others/Stat & Data/Lec 8.md"
+      
