@@ -1,115 +1,151 @@
-### 分布列
+- 无穷多取值
+- 概率分布 $\Longrightarrow$ **概率密度函数 PDF**
+  
+$$\int f(x)dx = 1$$
 
-对于随机变量的每个取值，给出一个概率
+- **累积分布函数 CDF**
+  
+$$f(x) = F'(x)$$
 
-$$P_X(x) = P(X=x)$$
+$$F(x) = P(X\leq x) = \int_{-\infty}^x f(t)dt$$
 
-### 分布函数
+!!! note "例"
+    - 质子中不同类别的夸克和胶子（部分子）携带动量比例的概率密度
 
-分布函数（累积分布函数 CDF）
+### 连续均匀分布（Uniform）
 
-$$F(x) = P(X\leq x)$$
+$$f(x) =
+\begin{cases}
+\frac{1}{b-a}, & a\leq x\leq b \\
+0, & \text{otherwise}
+\end{cases}
+$$
 
-### 常见离散随机变量
+$$E(X) = \int_{a}^b x\frac{1}{b-a}dx = \frac{a+b}{2}$$
 
-#### Bernoulli 随机变量
+$$\text{var}(X) = \int_{a}^b x^2\frac{1}{b-a}dx - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
 
-#### 二项随机变量（Binomial）
-
-一个伯努利变量在 $n$ 次独立重复试验中成功的次数为 $k$，则
-
-$$p(k) = \binom{n}{k} p^k (1-p)^{n-k}$$
-
-二项分布的参数：$n,p$，记作$B(n,p)$.
+#### Python 实现
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import scipy.stats as st
 
-x = np.random.binomial(10,0.3,100) # k,p,n
-sns.histplot(x, discrete=True)
+x = st.uniform(2,5).rvs(size=1000) # 2-7
 ```
 
-#### 几何随机变量（Geometric）
+!!! warning ""
+    `st.uniform(2,5)` 表示 $[2,7)$
 
-伯努利随机变量首次成功所需的次数
-
-$$p(k) = (1-p)^{k-1}p$$
+- 绘制 PDF
 
 ```python
-x = np.random.geometric(0.3, 1000)
-sns.histplot(x, discrete=True,stat='probability')
+x = np.arange(2,7,0.01)
+sns.histplot(x, bins=x, stat='density')
+f = st.uniform(2,5).pdf(x)
+plt.plot(x, f, 'r')
 ```
 
-绘制 CDF：
+### 指数分布（Exponential）
 
-```python
-sns.ecdfplot(x)
-```
-
-#### 泊松随机变量（Poisson）
-
-- 泊松分布与二项分布
-  - 二项分布：$n$ 很大，$p$ 很小，则二项分布近似于泊松分布
-  - $\lambda = np$
-- 随机变量 $X$ 表示一段时间/空间内发生事件A的次数
-
-$$p(k) = \frac{\lambda^k}{k!}e^{-\lambda}$$
-
-```python
-x = np.random.poisson(5, 1000)
-```
-
-### 期望
-
-$$E(X) = \sum_{x} xP(X=x)$$
-
-### 方差
-
-$$\text{var}(X) = E(X^2) - E(X)^2$$
-
-
-### $n$ 阶矩
-
-$$E(X^n) = \sum_{x} x^n P(X=x)$$
-
-- 一阶矩：期望
-- 二阶矩：可算出方差
-
-!!! tip "期望和方差的性质"
-    若 $Y=aX+b$，则
-
-    $$E(Y) = aE(X)+b$$
-
-    $$\text{var}(Y) = a^2\text{var}(X)$$
-
-#### 常见随机变量的期望值和方差
-
-##### 均匀分布
-
-$$
-p_X(k) = 
+$$f(x) =
 \begin{cases}
-\frac{1}{b-a+1}, & a\leq k\leq b \\
+\lambda e^{-\lambda x}, & x\geq 0 \\
 0, & \text{otherwise}
 \end{cases}
 $$
 
-$E(X) = \frac{1}{b-a+1} \sum_{k=a}^b k = \frac{a+b}{2}$
+- 描述某事件发生所需要的时间
+- 单位时间事件发生的次数平均值为 $\lambda$，时长 $t$ 之内发生的总次数为 $\lambda t$. 实际观察到的次数符合泊松分布：
+  $$g(n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!}$$
 
-$\text{var}(X) = \frac{(b-a+1)^2-1}{12}$
+  设 $0 \sim t$ 内事件未发生，其概率为 $g(0) = e^{-\lambda t}$.
 
-#### 多个随机变量的函数
+  $t \sim t+dt$ 内事件发生一次的概率为 
 
-$$E(g(X,Y)) = \sum_{x,y} g(x,y)P(x,y)$$
 
-若 $g$ 是 $X,Y$ 的线性函数，则
+### 正态分布（Normal）/ 高斯分布（Gaussian）
 
-$$E(aX+bY+c) = aE(X) + bE(Y) + c$$
+$$f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
 
-$$E(XY) = E(X)E(Y)$$
+- 期望值 $\mu$
+- 标准差 $\sigma$
 
-$$\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$$
+#### Python 实现
 
-$$\text{var}(XY) = (留给读者自行证明)$$
+```python
+x = st.norm(0,1).rvs(size=1000)
+```
+
+!!! tip "二维正态分布"
+    $$f(x,y) = \frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\text{exp}\left[{-\frac{1}{2(1-\rho^2)}\left(\frac{(x-\mu_1)^2}{\sigma_1^2} + \frac{(y-\mu_2)^2}{\sigma_2^2} - \frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}\right)}\right]$$
+
+    协方差矩阵
+    
+    $$\Sigma = \begin{bmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{bmatrix}$$
+
+    **Python 实现**
+
+    ```python
+    cov = np.array([[1,0.5],[0.5,1]])
+
+    x,y = np.mgrid[-5:5:0.1,-5:5:0.1]
+    pos = np.dstack((x,y))
+
+    # 二维正态分布的pdf
+    rv = st.multivariate_normal([xmean,ymean], cov)
+    z = rv.pdf(pos)
+
+    ax.plot_surface(x, y, z, cmap='viridis')
+    ```
+
+### 条件分布
+
+```python
+rv = multivariate_normal([xmean,ymean], cov)
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+x1d = np.arange(xmin,xmax,.1)
+y1d = np.arange(-2,-2,.06)
+
+for yval in [-2,-1,0]:
+    z=[]
+    for i in x1d:
+        z.append(rv.pdf([i,yval]))
+    con=ax.plot(x1d,z/sum(z),label="y={:.1f}".format(yval))
+plt.legend()
+```
+
+### 边缘分布
+
+```python
+from scipy.stats.contingency import margins
+
+x1d = np.arange(xmin, xmax, 0.1)
+y1d = np.arange(ymin, ymax, 0.1)
+
+xmargin, ymargin = margins(rv.pdf(pos))
+
+ax3.plot(x1d,xmargin/sum(xmargin),y1d,ymargin.T/sum(ymargin.T))
+```
+
+### 协方差和相关系数
+
+- 协方差 $\text{cov}(X,Y) = E[(X-\mu_X)(Y-\mu_Y)] = E(XY) - E(X)E(Y)$
+  - 若 $X,Y$ 独立，则 $\text{cov}(X,Y) = 0$
+- 相关系数 $\rho = \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y}$，也可记作 $\text{corr}(X,Y)$
+  - 协方差矩阵 $\Sigma = \begin{bmatrix} \text{var}(X) & \text{cov}(X,Y) \\ \text{cov}(X,Y) & \text{var}(Y) \end{bmatrix}$
+  - 二维正态分布的 $\text{Cov}(X,Y) = \rho\sigma_X\sigma_Y$, $\text{Corr}(X,Y) = \rho$
+
+### 二维离散随机变量生成
+
+```python
+cov = np.array([[2.0, 0.3], [0.3, 0.5]])
+
+rns = multivariate_normal.rvs(mean=[xmean,ymean], cov=cov,size=10000)
+g = sns.jointplot(x=rns[:,0],y=rns[:,1])
+g.plot_joint(sns.kdeplot, color="r", levels=6) # 等高线
+```

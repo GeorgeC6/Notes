@@ -1,151 +1,105 @@
-- 无穷多取值
-- 概率分布 $\Longrightarrow$ **概率密度函数 PDF**
-  
-$$\int f(x)dx = 1$$
+平均值 $\bar{X} = \sum_{i=1}^n X_i/n$
 
-- **累积分布函数 CDF**
-  
-$$f(x) = F'(x)$$
+样本方差 $S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2$
 
-$$F(x) = P(X\leq x) = \int_{-\infty}^x f(t)dt$$
+!!! question "Motivating Questions"
+    - $\bar{X}$ 的期望值和标准差？
+    - $\mathbb{E}[S^2]$ ?
+    - $\bar{X}$ 能用于估计 $\mu$ 吗？
+    - $S^2$ 能用于估计 $\sigma^2$ 吗？
+    - $\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$ 符合什么分布？
+    - $\frac{\bar{X}-\mu}{S/\sqrt{n}}$ 符合什么分布？
+    - $\frac{(n-1)S^2}{\sigma^2}$ 符合什么分布？
 
-!!! note "例"
-    - 质子中不同类别的夸克和胶子（部分子）携带动量比例的概率密度
+### 大数定理
 
-### 连续均匀分布（Uniform）
+- 平均值收敛于期望值
+$$
+    \lim_{n\to\infty} P(|\bar{X}-\mu|>\epsilon) = 0, \forall \epsilon>0
+$$
+- 频率收敛于概率
 
-$$f(x) =
-\begin{cases}
-\frac{1}{b-a}, & a\leq x\leq b \\
-0, & \text{otherwise}
-\end{cases}
+### 中心极限定理
+
+任意同分布的随机变量 $X_i$ 之和，符合正态分布。
+
+若 $X_i$ 服从均值 $\mu$，方差 $\sigma^2$ 的分布，则
+
+$$
+\lim_{n\to\infty} P\left(\frac{Y-n\mu}{\sqrt{n}\sigma}\leq x\right) = \Phi(x)
 $$
 
-$$E(X) = \int_{a}^b x\frac{1}{b-a}dx = \frac{a+b}{2}$$
-
-$$\text{var}(X) = \int_{a}^b x^2\frac{1}{b-a}dx - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
-
-#### Python 实现
+#### Python 验证
 
 ```python
+# 指数分布 -> 正态分布
+%matplotlib inline
+import numpy as np
+import scipy.stats as st
+import matplotlib.pyplot as plt
+
+alambda=2.
+fig,ax = plt.subplots(1,2)
+yarr=[]
+for n in range(50,1000):
+    x=st.expon.rvs(0,alambda,size=n)
+    y=(sum(x)-n*alambda)/(np.sqrt(n)*alambda)
+    yarr.append(y)
+ax[0].hist(x,density=True,bins='auto')
+bins = np.histogram_bin_edges(yarr, bins='auto')
+ax[1].hist(yarr,bins=bins,density=True)
+ax[1].plot(bins,st.norm.pdf(bins))
+plt.tight_layout()
+```
+
+### 统计学三大函数
+
+- t 分布
+  - $\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t_{n-1}$
+  - 用于估计 $\mu$
+- $\chi^2$ 分布
+  - $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}$
+  - 用于估计 $\sigma^2$
+- F 分布
+  - $X_i \sim N(\mu_1,\sigma_1^2), Y_i \sim N(\mu_2,\sigma_2^2)$, 则
+
+$$\left[\sum_{i=1}^m \frac{(Y_i-\mu_2)^2}{(m-1)\sigma_2^2}\right]/\left[\sum_{i=1}^n \frac{(X_i-\mu_1)^2}{(n-1)\sigma_1^2}\right] \sim F_{m-1,n-1}$$
+
+#### $\chi^2$ 函数
+
+$$ k_n(x) = \frac{1}{2^{n/2}\Gamma(n/2)}x^{n/2-1}e^{-x/2} $$
+
+- 若 $X_i$ 独立同分布，$X_i \sim N(0,1)$，则 $Y = \sum_{i=1}^n X_i^2 \sim \chi^2_n$
+- $E(Y) = n$
+- $\frac{(n-1)S^2}{\sigma^2} = \sum_{i=1}^n \frac{(X_i-\bar{X})^2}{\sigma^2} \sim \chi^2_{n-1}$
+
+##### Python 绘图
+
+```python
+import scipy.stats as st
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-import scipy.stats as st
 
-x = st.uniform(2,5).rvs(size=1000) # 2-7
+fig,ax = plt.subplots(2,1)
+
+for df in range(2,20,5):
+    x = np.linspace(st.chi2.ppf(0.01,df), st.chi2.ppf(0.99,df),100)
+    p=ax[0].plot(x, st.chi2.pdf(x, df),
+                 #d 整数，:3 占3位, 0 format中的第一个参数
+        label='dof={0:3d}'.format(df)) #定义图例
+    k=sum(st.norm.rvs(size=[df,1000])**2) #正态随机变量x，生成df x 1000组，计算Y=df个元素的平方和
+    ax[0].hist(k,density=True,alpha=0.6,color=p[0].get_color()) #1000组Y的分布
+    ax[1].plot(x/df, st.chi2.pdf(x, df)*df,
+        label='dof={0:3d}'.format(df)) #chi2/ndf
+ax[0].legend()
+ax[1].set(xlabel='x/dof')
+ax[0].set(xlabel='x')
+fig.tight_layout()
 ```
 
-!!! warning ""
-    `st.uniform(2,5)` 表示 $[2,7)$
+#### t 函数
 
-- 绘制 PDF
+$$t_n(y) = \frac{\Gamma\left(\frac{n+1}{2}\right)}{\sqrt{n\pi}\Gamma\left(\frac{n}{2}\right)}\left(1+\frac{y^2}{n}\right)^{-\frac{n+1}{2}}$$
 
-```python
-x = np.arange(2,7,0.01)
-sns.histplot(x, bins=x, stat='density')
-f = st.uniform(2,5).pdf(x)
-plt.plot(x, f, 'r')
-```
-
-### 指数分布（Exponential）
-
-$$f(x) =
-\begin{cases}
-\lambda e^{-\lambda x}, & x\geq 0 \\
-0, & \text{otherwise}
-\end{cases}
-$$
-
-- 描述某事件发生所需要的时间
-- 单位时间事件发生的次数平均值为 $\lambda$，时长 $t$ 之内发生的总次数为 $\lambda t$. 实际观察到的次数符合泊松分布：
-  $$g(n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!}$$
-
-  设 $0 \sim t$ 内事件未发生，其概率为 $g(0) = e^{-\lambda t}$.
-
-  $t \sim t+dt$ 内事件发生一次的概率为 
-
-
-### 正态分布（Normal）/ 高斯分布（Gaussian）
-
-$$f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
-
-- 期望值 $\mu$
-- 标准差 $\sigma$
-
-#### Python 实现
-
-```python
-x = st.norm(0,1).rvs(size=1000)
-```
-
-!!! tip "二维正态分布"
-    $$f(x,y) = \frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\text{exp}\left[{-\frac{1}{2(1-\rho^2)}\left(\frac{(x-\mu_1)^2}{\sigma_1^2} + \frac{(y-\mu_2)^2}{\sigma_2^2} - \frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}\right)}\right]$$
-
-    协方差矩阵
-    
-    $$\Sigma = \begin{bmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{bmatrix}$$
-
-    **Python 实现**
-
-    ```python
-    cov = np.array([[1,0.5],[0.5,1]])
-
-    x,y = np.mgrid[-5:5:0.1,-5:5:0.1]
-    pos = np.dstack((x,y))
-
-    # 二维正态分布的pdf
-    rv = st.multivariate_normal([xmean,ymean], cov)
-    z = rv.pdf(pos)
-
-    ax.plot_surface(x, y, z, cmap='viridis')
-    ```
-
-### 条件分布
-
-```python
-rv = multivariate_normal([xmean,ymean], cov)
-fig = plt.figure()
-ax = fig.add_subplot(111)
-
-x1d = np.arange(xmin,xmax,.1)
-y1d = np.arange(-2,-2,.06)
-
-for yval in [-2,-1,0]:
-    z=[]
-    for i in x1d:
-        z.append(rv.pdf([i,yval]))
-    con=ax.plot(x1d,z/sum(z),label="y={:.1f}".format(yval))
-plt.legend()
-```
-
-### 边缘分布
-
-```python
-from scipy.stats.contingency import margins
-
-x1d = np.arange(xmin, xmax, 0.1)
-y1d = np.arange(ymin, ymax, 0.1)
-
-xmargin, ymargin = margins(rv.pdf(pos))
-
-ax3.plot(x1d,xmargin/sum(xmargin),y1d,ymargin.T/sum(ymargin.T))
-```
-
-### 协方差和相关系数
-
-- 协方差 $\text{cov}(X,Y) = E[(X-\mu_X)(Y-\mu_Y)] = E(XY) - E(X)E(Y)$
-  - 若 $X,Y$ 独立，则 $\text{cov}(X,Y) = 0$
-- 相关系数 $\rho = \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y}$，也可记作 $\text{corr}(X,Y)$
-  - 协方差矩阵 $\Sigma = \begin{bmatrix} \text{var}(X) & \text{cov}(X,Y) \\ \text{cov}(X,Y) & \text{var}(Y) \end{bmatrix}$
-  - 二维正态分布的 $\text{Cov}(X,Y) = \rho\sigma_X\sigma_Y$, $\text{Corr}(X,Y) = \rho$
-
-### 二维离散随机变量生成
-
-```python
-cov = np.array([[2.0, 0.3], [0.3, 0.5]])
-
-rns = multivariate_normal.rvs(mean=[xmean,ymean], cov=cov,size=10000)
-g = sns.jointplot(x=rns[:,0],y=rns[:,1])
-g.plot_joint(sns.kdeplot, color="r", levels=6) # 等高线
-```
+- 若 $X_1,X_2$ 独立，$X_1 \sim \chi^2_n, X_2 \sim N(0,1)$，则 $Y = \frac{X_2}{\sqrt{X_1/n}} \sim t_n$
+- $\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t_{n-1}$
