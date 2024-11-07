@@ -292,4 +292,4 @@ $$\beta = (X^TX)^{-1}X^TY$$
 
 - $\sigma^2$ 仍然可用残差来估计
 
-$$\delta^2 = \delta^T \delta = (Y - X\beta)^T(Y - X\beta)$$
+$$\delta^2 = \delta^T \delta s= (Y - X\beta)^T(Y - X\beta)$$
