@@ -154,7 +154,12 @@ nav:
       - "Week 6: Convexity of Gamma Function": "Math/Special-Functions/Week 6/index.md"
       - "Week 7: Applications of Gamma Function": "Math/Special-Functions/Week 7/index.md"
       - "Week 8: Approximation of Gamma Function": "Math/Special-Functions/Week 8/index.md"
-  
+    - 概率论与数理统计:
+      - "Math/Prob & Stat/index.md"
+      - "杂记": 
+        - "Math/Prob & Stat/Misc/index.md"
+        - "协方差": "Math/Prob & Stat/Misc/Covariance.md"
+
   - 物理:
     - "物理": "Physics/Physics I/intro.md"
   
@@ -197,4 +202,6 @@ nav:
       - 连续型随机变量: "Others/Stat & Data/Lec 5.md"
       - 特殊函数及参数估计: "Others/Stat & Data/Lec 6.md"
       - 参数估计: "Others/Stat & Data/Lec 7.md"
+      - 拟合优度: "Others/Stat & Data/Lec 8.md"
+      - 回归分析: "Others/Stat & Data/Lec 9.md"
       
