@@ -40,7 +40,6 @@
 
 由式 \eqref{eq1.1} 或 \eqref{eq1.2} 可以得到以下性质：
 
-
 1. $\text{Cov}(X,X) = \text{Var}(X)$.
 2. $\text{Cov}(X,Y) = \text{Cov}(Y,X)$（对称）.
 3. $\text{Cov}(aX,bY) = ab\text{Cov}(X,Y)$（倍乘）.
@@ -52,6 +51,12 @@
 
 \begin{equation*}
     \left(\text{Cov}(X,Y) \right)^2 \leq \text{Var}(X)\text{Var}(Y).
+\end{equation*}
+
+要注意的是, 协方差可用来衡量两个随机变量之间的线性相关性, 但是**不能说明独立性**. 因为
+
+\begin{equation*}
+    \text{Cov}(X,Y) = 0 \nRightarrow X \text{ 和 } Y \text{ 独立}.
 \end{equation*}
 
 ## **3 $~~$协方差矩阵**
@@ -66,3 +71,23 @@
         \text{Cov}(X_n,X_1) & \text{Cov}(X_n,X_2) & \cdots & \text{Cov}(X_n,X_n)
     \end{pmatrix}.
 \end{equation}
+
+性质：
+
+1. $\text{Cov}(X)$ 是一个实对称矩阵.
+2. $\text{Cov}(X)$ 是一个半正定矩阵.
+
+    <!-- 证明：对于任意的 $n$ 维向量 $a = (a_1, a_2, \cdots, a_n)$, 有
+
+    \begin{aligned}
+        a^T\text{Cov}(X)a &= \begin{pmatrix} a_1 & a_2 & \cdots & a_n \end{pmatrix} \begin{pmatrix}
+            \text{Cov}(X_1,X_1) & \text{Cov}(X_1,X_2) & \cdots & \text{Cov}(X_1,X_n) \\
+            \text{Cov}(X_2,X_1) & \text{Cov}(X_2,X_2) & \cdots & \text{Cov}(X_2,X_n) \\
+            \vdots & \vdots & \ddots & \vdots \\
+            \text{Cov}(X_n,X_1) & \text{Cov}(X_n,X_2) & \cdots & \text{Cov}(X_n,X_n)
+        \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \\
+        &= \begin{pmatrix} \sum_{i=1}^n a_i\text{Cov}(X_i,X_1) & \sum_{i=1}^n a_i\text{Cov}(X_i,X_2) & \cdots & \sum_{i=1}^n a_i\text{Cov}(X_i,X_n) \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \\
+        &= \sum_{i=1}^n \sum_{j=1}^n a_ia_j\text{Cov}(X_i,X_j) \\
+        &= \text{Cov}\left(\sum_{i=1}^n a_iX_i, \sum_{j=1}^n a_jX_j\right) \geq 0.
+    \end{aligned} -->
+
