@@ -85,7 +85,7 @@ $$f(x) = \beta_0 + \beta_1 (x - \bar{x})$$
 
 #### $f(x)$ 的区间
 
-!!! question $f(x)$ 的 $1-\alpha$ 区间？
+!!! question "$f(x)$ 的 $1-\alpha$ 区间？"
     - 根据 $f(x_i)$ 的区间得到边界
     - 根据 $\beta_0$ 和 $\beta_1$ 的区间得到边界
     - 根据 $b_0$ 和 $b_1$ 的区间得到边界
@@ -222,6 +222,8 @@ np.linalg.inv(A)@b  # 更慢
 
 $$Y = b_0 + b_1X_1 + b_2X_2 + ... + b_pX_p + \epsilon$$
 
+$b_k$ 为 $Y$ 对 $x_k$ 的回归系数.
+
 - 写为 $\beta_0,\beta_1,...,\beta_p$ 的形式：
 
 $$Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_pX_p + \epsilon$$
@@ -293,3 +295,10 @@ $$\beta = (X^TX)^{-1}X^TY$$
 - $\sigma^2$ 仍然可用残差来估计
 
 $$\delta^2 = \delta^T \delta s= (Y - X\beta)^T(Y - X\beta)$$
+
+$$\sigma^2 = \frac{\delta^2}{n-p-1}$$
+
+#### $\beta_j$ 的区间估计
+
+$$(\hat{\beta}_j - \beta_j) / (\hat{\sigma}\sqrt{L_{jj}^{-1}}) \sim t(n-p-1)$$
+
