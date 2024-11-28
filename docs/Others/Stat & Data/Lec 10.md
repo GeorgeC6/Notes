@@ -293,6 +293,85 @@ y2 =
 
 - 将原本 $X$ 的相关矩阵写为
   
-  $$\rho = \begin{bmatrix} 1 & \rho_{12} & \rho_{13} \\ \rho_{12} & 1 & \rho_{23} \\ \rho_{13} & \rho_{23} & 1 \end{bmatrix}$$
+  $$\rho = \begin{bmatrix} 1 & \rho_{12} & \rho_{13} \\ \rho_{21} & 1 & \rho_{23} \\ \rho_{31} & \rho_{32} & 1 \end{bmatrix}$$
 
   记 $P_{ij}$ 为 
+
+
+
+
+---
+
+## <center>大作业</center>
+
+!!! warning "自己找数据和主题!"
+    参考数据来源：
+    - [Our World in Data](https://ourworldindata.org/)
+
+---
+
+## 方差分析（ANOVA）
+
+### 单因素
+
+> **同因素的不同水平对结果的影响**是否显著不同
+
+- 例：配方A,B，各自得到一组关于指标Y的数据
+
+$$[Y_{11},Y_{12},\cdots,Y_{1n}], [Y_{21},Y_{22},\cdots,Y_{2m}]$$
+
+配方A、B对结果的影响是否显著不同？
+
+- 计算Y在A、B配方下的平均值. 假设 $H_0: \bar{Y}_A = \bar{Y}_B$
+
+$$S^2 = \frac{1}{n+m-2} \left[ \sum_{i=1}^n (Y_{Ai} - \bar{Y}_A)^2 + \sum_{i=1}^m (Y_{Bi} - \bar{Y}_B)^2 \right]$$
+
+$$T = \frac{\sqrt{\frac{nm}{n+m}}(\bar{Y}_A - \bar{Y}_B - \theta_0)}{S} \sim t(n+m-2)$$
+
+```python
+x=[2.74,2.75,2.72,2.69]
+y=[2.75,2.78,2.74,2.76,2.72]
+print(st.ttest_ind(x,y))
+```
+
+!!! tip "水平 $k$ 多于 2 时"
+    $k$ 个水平，每个水平下有 $n_i$ 个数据，总数据量为 $n = \sum_{i=1}^k n_i$.
+
+    水平 $i$ 对 Y 的影响造成的平均值记为 $a_i$，对于只受到 $a_i$ 影响的数据 $Y_{ij}$，有
+
+    $$Y_{ij} = a_i + \epsilon_{ij}$$
+
+    - 假设 $H_0: a_1 = a_2 = \cdots = a_k$
+    - 各水平间的差异: $SS_A = \sum_{i=1}^k n_i (\bar{Y}_i - \bar{Y})^2$
+    - 同水平内样本的差异: $SS_e = \sum_{i=1}^k \sum_{j=1}^{n_i} (Y_{ij} - \bar{Y}_i)^2$
+    - 总样本差异: $SS = \sum_{i=1}^k \sum_{j=1}^{n_i} (Y_{ij} - \bar{Y})^2$
+    
+    可以证明
+    
+    $$SS = SS_A + SS_e$$
+
+    $$F = \frac{SS_A/(k-1)}{SS_e/(n-k)} \sim F(k-1,n-k)$$
+
+    - 当 $SS_A / SS_e < F_{\alpha}(k-1,n-k)$ 时，假设 $H_0$ 成立
+
+    ```python
+    meanx = np.mean(x)
+    meany = np.mean(y)
+    meanall = np.float64(sum(x+y)/len(x+y))
+
+    ssa = len(x)*((meanx-meanall)**2)+len(y)*((meany-meanall)**2)
+    sse = sum((x-meanx)**2)+sum((y-meany)**2)
+    sta = ssa/(sse/(len(x)+len(y)-2))
+
+    print(sta,1-st.f(1,len(x)+len(y)-2).cdf(sta))
+    print(st.f_oneway(x,y)) # 单因素 F-test
+    print(st.ttest_ind(x,y))
+    ```
+
+    可以发现三种方式得到的 p-value 是一样的！
+
+### 多因素
+
+> 当因素有多种时，分析**每种因素**对结果的影响
+
+因素 $A,B$，各自有 $k,l$ 个水平，将

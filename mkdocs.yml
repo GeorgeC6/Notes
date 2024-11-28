@@ -205,4 +205,11 @@ nav:
       - 拟合优度: "Others/Stat & Data/Lec 8.md"
       - 回归分析: "Others/Stat & Data/Lec 9.md"
       - 多元回归和方差分析: "Others/Stat & Data/Lec 10.md"
-      
+      - 常见数据格式和分析: "Others/Stat & Data/Lec 11.md"
+      - 机器学习 Pt.I: "Others/Stat & Data/Lec 12.md"
+      - 机器学习 Pt.II: "Others/Stat & Data/Lec 13.md"
+    - 无线网络应用:
+      - "Others/无线网络应用/index.md"
+      - Lec 1: "Others/无线网络应用/Lec 1.md"
+      - Lec 2: "Others/无线网络应用/Lec 2.md"
+      - Lec 3: "Others/无线网络应用/Lec 3.md"
