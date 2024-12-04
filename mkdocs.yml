@@ -163,9 +163,8 @@ nav:
   - 物理:
     - "物理": "Physics/Physics I/intro.md"
   
-  - 数理杂谈:
+  - 数理方法:
     - "MathPhy/index.md"
-    - "数学物理方法": "MathPhy/Math4Phy/index.md"
 
   - 编程语言:
     - Python: 
@@ -213,3 +212,5 @@ nav:
       - Lec 1: "Others/无线网络应用/Lec 1.md"
       - Lec 2: "Others/无线网络应用/Lec 2.md"
       - Lec 3: "Others/无线网络应用/Lec 3.md"
+      - Lec 4: "Others/无线网络应用/Lec 4.md"
+      - Lec 5: "Others/无线网络应用/Lec 5.md"

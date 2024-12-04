@@ -11,7 +11,9 @@ hide:
 
 !!! info "Tips"
     若有错误之处或可以改进的地方，欢迎指出！:octicons-heart-fill-24:{ .heart }
-    
+
+???+ info inline end "站点统计"
+    本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 
 ## 许可
 
