@@ -16,24 +16,24 @@
 ### 配置命令模式
 
 1. 用户 EXEC 模式
-   - 提示符：`>`
-   - 输入`enable`进入特权模式
-   - 输入`exit`退出
+      - 提示符：`>`
+      - 输入`enable`进入特权模式
+      - 输入`exit`退出
 2. 特权 EXEC 模式
-   - 提示符：`#`
-   - 输入`disable`回到用户模式
-   - 输入`configure terminal`进入全局配置模式
+      - 提示符：`#`
+      - 输入`disable`回到用户模式
+      - 输入`configure terminal`进入全局配置模式
 3. 全局配置模式
-   - 需进入特权模式
-   - 提示符：`(config)#` 结尾
-   - **输入密码时不回显，直接回车**
+      - 需进入特权模式
+      - 提示符：`(config)#` 结尾
+      - **输入密码时不回显，直接回车**
 
-    两个子模式：
+      两个子模式：
 
-   1. 线路子配置模式
-      - 提示符：`(config-line)#` 结尾
-   2. 接口子配置模式
-      - 提示符：`(config-if)#` 结尾
+      1. 线路子配置模式
+         - 提示符：`(config-line)#` 结尾
+      2. 接口子配置模式
+         - 提示符：`(config-if)#` 结尾
 
 ```mermaid
 graph LR
@@ -45,14 +45,15 @@ graph LR
 ```
 
 VTY: Virtual Teletype Terminal 虚拟远程终端
+
 SSH与Telnet访问均纳入VTY线路进行管理
 
 
-查看接口状态命令：
+!!! example "查看接口状态命令"
 
-```bash
-show ip interface brief
-```
+    ```bash
+    show ip interface brief
+    ```
 
 !!! tip "浙大古早的 BBS 论坛"
 
@@ -115,5 +116,6 @@ FTPS：990（安全）
 
 !!! info "实验心得"
     前人的建议：**此次实验和上次实验是之后实验的基础，最好所有组员都搞懂，不然很心累！**
+
     - PC1 与 PC2 的 IP 和 DNS 按部就班设置好（{++有可能出现没保存的情况！++}）
     - PC1 搞好之后可能要等一会 PC2 才能连上
