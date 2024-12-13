@@ -67,7 +67,7 @@ $$n_\text{samples} \times n_\text{features}$$
 - 数据集拆分：为了评估，一般分为**训练（training）集**和**测试（testing）集**
 
 !!! example "（很大的）例子"
-    ```python
+    ```python {.line-numbers}
     from sklearn.inspection import DecisionBoundaryDisplay
     from sklearn import svm, metrics
     from sklearn.model_selection import train_test_split
