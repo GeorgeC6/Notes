@@ -207,6 +207,8 @@ nav:
       - 常见数据格式和分析: "Others/Stat & Data/Lec 11.md"
       - 机器学习 Pt.I: "Others/Stat & Data/Lec 12.md"
       - 机器学习 Pt.II: "Others/Stat & Data/Lec 13.md"
+      - 机器学习 Pt.III: "Others/Stat & Data/Lec 14.md"
+      - 机器学习 Pt.IV: "Others/Stat & Data/Lec 15.md"
     - 无线网络应用:
       - "Others/无线网络应用/index.md"
       - Lec 1: "Others/无线网络应用/Lec 1.md"
@@ -214,3 +216,4 @@ nav:
       - Lec 3: "Others/无线网络应用/Lec 3.md"
       - Lec 4: "Others/无线网络应用/Lec 4.md"
       - Lec 5: "Others/无线网络应用/Lec 5.md"
+      - Lec 6: "Others/无线网络应用/Lec 6.md"
