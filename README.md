@@ -1,3 +1,3 @@
-# Mkdocs-test
+# 这是 George 的云知识库！
 
-A test for mkdocs and gh-pages.
+不定期更新目前在学的课程笔记/自学内容等，欢迎提出建议！
