@@ -1,6 +1,6 @@
 site_name: George 的知识库
 site_author: George Cao
-site_url: https://georgec6.github.io/Mkdocs-test/
+site_url: https://georgec6.github.io/Notes/
 site_description: George's knowledge base
 
 #repo_name: Mkdocs-test
@@ -26,7 +26,7 @@ theme:
     - navigation.top
     - navigation.indexes  # 点击小节名字自动显示 index 界面
     - navigation.footer # 底部导航栏
-    - navigation.instant # 站内瞬移
+    # - navigation.instant # 站内瞬移，但会导致公式跳转后不渲染
     - navigation.instant.progress
     - toc.integrate   # 文档 toc 集成到总目录中
     - toc.follow  # 右侧目录跟随滚动
@@ -166,6 +166,10 @@ nav:
   - 数理方法:
     - "MathPhy/index.md"
 
+  - 理论力学:
+    - "TheoMech/index.md"
+    - 哈密顿力学: "TheoMech/Hamilton.md"
+
   - 编程语言:
     - Python: 
       - 前言: "Prog-lang/Python/intro.md"
@@ -209,6 +213,7 @@ nav:
       - 机器学习 Pt.II: "Others/Stat & Data/Lec 13.md"
       - 机器学习 Pt.III: "Others/Stat & Data/Lec 14.md"
       - 机器学习 Pt.IV: "Others/Stat & Data/Lec 15.md"
+      - 粒子物理实验中的统计学: "Others/Stat & Data/Lec 16.md"
     - 无线网络应用:
       - "Others/无线网络应用/index.md"
       - Lec 1: "Others/无线网络应用/Lec 1.md"
@@ -217,3 +222,5 @@ nav:
       - Lec 4: "Others/无线网络应用/Lec 4.md"
       - Lec 5: "Others/无线网络应用/Lec 5.md"
       - Lec 6: "Others/无线网络应用/Lec 6.md"
+      - Lec 7: "Others/无线网络应用/Lec 7.md"
+      - 补充实验: "Others/无线网络应用/补充实验.md"
