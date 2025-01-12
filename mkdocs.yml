@@ -165,6 +165,10 @@ nav:
   
   - 数理方法:
     - "MathPhy/index.md"
+    - "正交曲线系": "MathPhy/Curvilinear Coordinates.md"
+    - 附录:
+      - "MathPhy/Appendix/index.md"
+      - "常用傅里叶变换/拉普拉斯变换": "MathPhy/Appendix/FT&LT.md"
 
   - 理论力学:
     - "TheoMech/index.md"
@@ -224,3 +228,4 @@ nav:
       - Lec 6: "Others/无线网络应用/Lec 6.md"
       - Lec 7: "Others/无线网络应用/Lec 7.md"
       - 补充实验: "Others/无线网络应用/补充实验.md"
+  - Final Project: "Final Project/Final.md"
