@@ -19,7 +19,7 @@
 #### 2.1.1 各大洲的平均投入变化趋势
 
 ???+ note "Code 1"
-    ```python
+    ```python linenums="1"
     import numpy as np
     import matplotlib.pyplot as plt
     import pandas as pd
@@ -155,7 +155,7 @@
 与 2.1 节的公共教育支出不同，这里讨论的是由私人来源（家庭和其他私人实体）资助的教育支出。本节数据仅涉及了OECD国家，且由于数据下载不便，只粗浅地展示2020年的数据。图中数据单位均为占GDP的百分比。
 
 ???+ note "Code 5"
-    ```python
+    ```python linenums="1"
     # Import data
     early = pd.read_csv('data/OECD-private-spending/early-childhood.csv')
     primary = pd.read_csv('data/OECD-private-spending/primary.csv')
@@ -223,7 +223,7 @@
 世界范围内，文盲率在逐年下降。而年轻一代的文盲率更低，这说明教育水平在逐渐提高。
 
 ???+ note "Code 6"
-    ```python
+    ```python linenums="1"
     # import data
     literacy = pd.read_csv('data/cross-country-literacy-rates/cross-country-literacy-rates.csv')
     literacy_younggen = pd.read_csv('data/literacy-rate-of-young-men-and-women/literacy-rate-of-young-men-and-women.csv')
@@ -260,7 +260,7 @@
 假设 $H_{0,\text{GDP}}:$ 识字率与人均GDP之间没有显著关系，$H_{0,\text{SEX}}:$ 识字率与性别差异之间没有显著关系，取显著性水平为 $\alpha = 0.05$。
 
 ???+ note "Code 7"
-    ```python
+    ```python linenums="1"
     outcome = pd.read_csv('data/learning-outcomes-vs-gdp-per-capita/learning-outcomes-vs-gdp-per-capita.csv')
 
     # 截取 Year = 2010 的数据
@@ -336,7 +336,7 @@
 使用机器学习的方法预测全球范围内的识字率变化趋势。因为识字率的变化趋势显然不是线性的，所以这里采用了 `sklearn` 包中的随机森林回归模型，以1820 - 2023年的数据为训练集，预测2024 - 2050年的识字率。
 
 ???+ note "Code 8"
-    ```python
+    ```python linenums="1"
     from sklearn.ensemble import RandomForestRegressor
 
     literacy_world = literacy[literacy['Continent'] == 'World']
@@ -374,7 +374,7 @@
 拟合效果不是很好。下面尝试用 `Prophet` 库进行预测。
 
 ???+ note "Code 9"
-    ```python
+    ```python linenums="1"
     from prophet import Prophet
     # 转换为 Prophet 需要的格式
     data = literacy_train.rename(columns={'Year': 'ds', 'Literacy rate': 'y'})
@@ -389,6 +389,8 @@
     plt.ylabel('Literacy Rate')
     plt.title('Literacy Rate Forecast')
     ```
+
+![fig7](image/fig7.png)
 
 <center><font size=4>**图7.** 使用Prophet预测全球识字率</font></center>
 
