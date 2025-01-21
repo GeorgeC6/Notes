@@ -3,10 +3,7 @@ site_author: George Cao
 site_url: https://georgec6.github.io/Notes/
 site_description: George's knowledge base
 
-#repo_name: Mkdocs-test
-#repo_url: https://github.com/GeorgeC6/Mkdocs-test
-
-copyright: Copyright &copy; 2024 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
+copyright: Copyright &copy; 2024 - 2025 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
 
 theme:
   name: material
@@ -187,6 +184,7 @@ nav:
 
     - LaTeX: 
       - "Prog-lang/LaTeX/index.md"
+      - 常用符号命令: "Prog-lang/LaTeX/Symbols.md"
       - Beamer: "Prog-lang/LaTeX/Beamer/index.md"
       - TikZ: "Prog-lang/LaTeX/TikZ/index.md"
       - 资料: "Prog-lang/LaTeX/Resources/index.md"
@@ -218,6 +216,7 @@ nav:
       - 机器学习 Pt.III: "Others/Stat & Data/Lec 14.md"
       - 机器学习 Pt.IV: "Others/Stat & Data/Lec 15.md"
       - 粒子物理实验中的统计学: "Others/Stat & Data/Lec 16.md"
+      - Final Project: "Others/Stat & Data/Final Project/Final.md"
     - 无线网络应用:
       - "Others/无线网络应用/index.md"
       - Lec 1: "Others/无线网络应用/Lec 1.md"
@@ -228,4 +227,3 @@ nav:
       - Lec 6: "Others/无线网络应用/Lec 6.md"
       - Lec 7: "Others/无线网络应用/Lec 7.md"
       - 补充实验: "Others/无线网络应用/补充实验.md"
-  - Final Project: "Final Project/Final.md"
