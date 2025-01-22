@@ -185,6 +185,7 @@ nav:
     - LaTeX: 
       - "Prog-lang/LaTeX/index.md"
       - 常用符号命令: "Prog-lang/LaTeX/Symbols.md"
+      - 宏包: "Prog-lang/LaTeX/Packages.md"
       - Beamer: "Prog-lang/LaTeX/Beamer/index.md"
       - TikZ: "Prog-lang/LaTeX/TikZ/index.md"
       - 资料: "Prog-lang/LaTeX/Resources/index.md"
