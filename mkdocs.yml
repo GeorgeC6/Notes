@@ -158,7 +158,11 @@ nav:
         - "协方差": "Math/Prob & Stat/Misc/Covariance.md"
 
   - 物理:
-    - "物理": "Physics/Physics I/intro.md"
+    - "普通物理学 I": "Physics/Physics I/intro.md"
+    - "普通物理学 II": "Physics/Physics II/index.md"
+    - "原子物理":
+      - "Physics/Atommechanik/index.md"
+      - 课程论文: "Physics/Atommechanik/课程论文.md"
   
   - 数理方法:
     - "MathPhy/index.md"
@@ -193,7 +197,9 @@ nav:
 
   - 音乐:
     - "Music/index.md"
-    - "音乐理论": "Music/Music Theory/index.md"
+    - "音乐理论": 
+      - "Music/Music Theory/index.md"
+      - "五线谱": "Music/Music Theory/SheetMusic/SheetMusic.md"
     - "音乐制作": "Music/Music Production/index.md"
 
   - 其它课程:
@@ -229,3 +235,4 @@ nav:
       - Lec 6: "Others/无线网络应用/Lec 6.md"
       - Lec 7: "Others/无线网络应用/Lec 7.md"
       - 补充实验: "Others/无线网络应用/补充实验.md"
+    - 大学物理实验: "Others/大物实验/index.md"
