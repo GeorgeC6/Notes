@@ -158,9 +158,9 @@ nav:
         - "协方差": "Math/Prob & Stat/Misc/Covariance.md"
 
   - 物理:
-    - "普通物理学 I": "Physics/Physics I/intro.md"
-    - "普通物理学 II": "Physics/Physics II/index.md"
-    - "原子物理":
+    - 普通物理学 I: "Physics/Physics I/intro.md"
+    - 普通物理学 II: "Physics/Physics II/intro.md"
+    - 原子物理:
       - "Physics/Atommechanik/index.md"
       - 课程论文: "Physics/Atommechanik/课程论文.md"
   
@@ -175,25 +175,25 @@ nav:
     - "TheoMech/index.md"
     - 哈密顿力学: "TheoMech/Hamilton.md"
 
-  - 编程语言:
+  - CS:
     - Python: 
-      - 前言: "Prog-lang/Python/intro.md"
-      - 第零章 Python拾级: "Prog-lang/Python/Chapter 0.md"
-      - 第一章 数据类型与运算符: "Prog-lang/Python/Chapter 1.md"
-      - 第二章 常用函数: "Prog-lang/Python/Chapter 2.md"
-      - 第三章 条件和循环: "Prog-lang/Python/Chapter 3.md"
-      - 第四章 算法简介: "Prog-lang/Python/Chapter 4.md"
+      - 前言: "CS/Python/intro.md"
+      - 第零章 Python拾级: "CS/Python/Chapter 0.md"
+      - 第一章 数据类型与运算符: "CS/Python/Chapter 1.md"
+      - 第二章 常用函数: "CS/Python/Chapter 2.md"
+      - 第三章 条件和循环: "CS/Python/Chapter 3.md"
+      - 第四章 算法简介: "CS/Python/Chapter 4.md"
     
-    - C: "Prog-lang/C/C 学习笔记.md"
+    - C: "CS/C/C 学习笔记.md"
 
     - LaTeX: 
-      - "Prog-lang/LaTeX/index.md"
-      - 常用符号命令: "Prog-lang/LaTeX/Symbols.md"
-      - 图片排版: "Prog-lang/LaTeX/Figure.md"
-      - 宏包: "Prog-lang/LaTeX/Packages.md"
-      - Beamer: "Prog-lang/LaTeX/Beamer/index.md"
-      - TikZ: "Prog-lang/LaTeX/TikZ/index.md"
-      - 资料: "Prog-lang/LaTeX/Resources/index.md"
+      - "CS/LaTeX/index.md"
+      - 常用符号命令: "CS/LaTeX/Symbols.md"
+      - 图片排版: "CS/LaTeX/Figure.md"
+      - 宏包: "CS/LaTeX/Packages.md"
+      - Beamer: "CS/LaTeX/Beamer/index.md"
+      - TikZ: "CS/LaTeX/TikZ/index.md"
+      - 资料: "CS/LaTeX/Resources/index.md"
 
   - 音乐:
     - "Music/index.md"

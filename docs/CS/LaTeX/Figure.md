@@ -40,36 +40,35 @@
 ```latex
 \begin{figure}[htbp]
     \centering
-    \subcaptionbox{子图1}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图1}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.4\textwidth]{example}
-        \label{}
     }
     \hspace{0.5cm} 
-    \subcaptionbox{子图2}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图2}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.4\textwidth]{example}
-        \label{}
     } 
     \caption{Figure}
     \label{}
 \end{figure}
 ```
 
+!!! warning "`subcaptionbox` 的引用问题"
+    **注意**：`\label{}` 要放在 `\subcaptionbox` 里面，否则引用时会找不到标签。
+
 ## 双图纵排子图
 
 ```latex
 \begin{figure}[htbp]
     \centering
-    \subcaptionbox{子图1}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图1}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.4\textwidth]{example}
-        \label{}
     }\\[0.5cm] % 换行并产生图片纵向距离
-    \subcaptionbox{子图2}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图2}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.4\textwidth]{example}
-        \label{}
     } 
     \caption{双图纵排子图}
     \label{}
@@ -81,20 +80,17 @@
 ```latex
 \begin{figure}[htbp]
     \centering
-    \subcaptionbox{子图1}[0.33\textwidth][c]{
+    \subcaptionbox{\label{}子图1}[0.33\textwidth][c]{
         \centering
         \includegraphics[width=0.32\textwidth]{example}
-        \label{}
     }%
-        \subcaptionbox{子图2}[0.33\textwidth][c]{
+        \subcaptionbox{\label{}子图2}[0.33\textwidth][c]{
         \centering
         \includegraphics[width=0.32\textwidth]{example}
-        \label{}
     }%
-        \subcaptionbox{子图3}[0.33\textwidth][c]{
+        \subcaptionbox{\label{}子图3}[0.33\textwidth][c]{
         \centering
         \includegraphics[width=0.32\textwidth]{example}
-        \label{}
     }%
     \caption{三个子图横排}
     \label{}
@@ -106,21 +102,18 @@
 ```latex
 \begin{figure}[htbp]
     \centering
-    \subcaptionbox{子图1}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图1}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }\\ % 换行
-    \subcaptionbox{子图2}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图2}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }%
     \hspace{0.3cm}
-    \subcaptionbox{子图3}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图3}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }%
     \caption{三个子图（金字塔型）}
     \label{}
@@ -139,16 +132,14 @@
         \label{}
     \end{minipage}%
     \begin{minipage}[b]{0.45\linewidth}
-        \subcaptionbox{并排两个子图1}[0.45\textwidth][c]{
+        \subcaptionbox{\label{}并排两个子图1}[0.45\textwidth][c]{
             \centering
             \includegraphics[width=0.45\textwidth]{example}
-            \label{}
         }%
         \hspace{0.02cm} % 调整图形间距
-        \subcaptionbox{并排两个子图2}[0.45\textwidth][c]{
+        \subcaptionbox{\label{}并排两个子图2}[0.45\textwidth][c]{
             \centering
             \includegraphics[width=0.45\textwidth]{example}
-            \label{}
         } 
         \caption{并排两个子图}
         \label{}
@@ -190,27 +181,23 @@
 ```latex
 \begin{figure}[htbp]
     \centering
-    \subcaptionbox{子图1}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图1}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }%
     \hspace*{0.1cm}
-    \subcaptionbox{子图2}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图2}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }\\% % 换行
-    \subcaptionbox{子图3}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图3}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }%
     \hspace*{0.1cm}
-    \subcaptionbox{子图4}[0.45\textwidth][c]{
+    \subcaptionbox{\label{}子图4}[0.45\textwidth][c]{
         \centering
         \includegraphics[width=0.45\textwidth]{example}
-        \label{}
     }%
     \caption{四个子图}
     \label{}
