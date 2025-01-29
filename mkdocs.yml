@@ -176,6 +176,7 @@ nav:
     - 哈密顿力学: "TheoMech/Hamilton.md"
 
   - CS:
+    - "CS/index.md"
     - Python: 
       - 前言: "CS/Python/intro.md"
       - 第零章 Python拾级: "CS/Python/Chapter 0.md"
@@ -194,6 +195,18 @@ nav:
       - Beamer: "CS/LaTeX/Beamer/index.md"
       - TikZ: "CS/LaTeX/TikZ/index.md"
       - 资料: "CS/LaTeX/Resources/index.md"
+    
+    - Git: "CS/Git/git.md"
+
+    - STM32: 
+      - "CS/STM32/index.md"
+      - "[1-1] STM32简介": "CS/STM32/1-1/STM32简介.md"
+      - "[2-1] 第一个STM32工程": "CS/STM32/2-1/第一个工程.md"
+
+    - CS106B:
+      - "CS/CS106B/index.md"
+      - Assignments:
+        - A0: "CS/CS106B/Assignments/A0/a0.md"
 
   - 音乐:
     - "Music/index.md"

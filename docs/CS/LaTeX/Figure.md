@@ -37,7 +37,7 @@
 
 ### 子图
 
-```latex
+```latex hl_lines="3 8"
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{\label{}子图1}[0.45\textwidth][c]{
@@ -55,7 +55,7 @@
 ```
 
 !!! warning "`subcaptionbox` 的引用问题"
-    **注意**：`\label{}` 要放在 `\subcaptionbox` 里面，否则引用时会找不到标签。
+    **注意**：`\label{}` 要放在 `\subcaptionbox` 的第一个 `{}` 里面，否则引用时会找不到标签。
 
 ## 双图纵排子图
 
