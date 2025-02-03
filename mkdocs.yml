@@ -198,15 +198,17 @@ nav:
     
     - Git: "CS/Git/git.md"
 
+    - CS106B:
+      - "CS/CS106B/index.md"
+      - Lectures:
+        - "Lec 0: Introduction": "CS/CS106B/Lectures/Lec 0/Lec0.md"
+      - Assignments:
+        - A0: "CS/CS106B/Assignments/A0/a0.md"
+
     - STM32: 
       - "CS/STM32/index.md"
       - "[1-1] STM32简介": "CS/STM32/1-1/STM32简介.md"
       - "[2-1] 第一个STM32工程": "CS/STM32/2-1/第一个工程.md"
-
-    - CS106B:
-      - "CS/CS106B/index.md"
-      - Assignments:
-        - A0: "CS/CS106B/Assignments/A0/a0.md"
 
   - 音乐:
     - "Music/index.md"
