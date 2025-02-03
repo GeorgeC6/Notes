@@ -42,3 +42,20 @@ returnType functionName(parameters); //有分号
 ```cpp
 returnType functionName(parameters = defaultValue);
 ```
+
+***e.g.***
+
+```cpp
+// Print a line of characters of the given length
+void printLine(int length = 5, char ch = '*'){
+    for (int i = 0; i < length; i++){
+        cout << ch;
+    }
+}
+
+int main(){
+    printLine(); // *****
+    printLine(3); // ***
+    printLine(4, '#'); // ####
+}
+```
