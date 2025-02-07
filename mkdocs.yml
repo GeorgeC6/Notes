@@ -1,7 +1,7 @@
 site_name: George 的知识库
 site_author: George Cao
 site_url: https://georgec6.github.io/Notes/
-site_description: George's knowledge base
+site_description: 一名力学僧的笔记站点~
 
 copyright: Copyright &copy; 2024 - 2025 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
 
@@ -131,7 +131,9 @@ extra_css:
   - stylesheets/custom.css
 
 nav:
-  - 主页: "index.md"
+  - 主页:
+    - "index.md"
+    - 友链: "Links.md"
   - 数学:
     - 微积分 I:
       - "Math/Calculus I/index.md"
@@ -194,7 +196,6 @@ nav:
       - 宏包: "CS/LaTeX/Packages.md"
       - Beamer: "CS/LaTeX/Beamer/index.md"
       - TikZ: "CS/LaTeX/TikZ/index.md"
-      - 资料: "CS/LaTeX/Resources/index.md"
     
     - Git: "CS/Git/git.md"
 

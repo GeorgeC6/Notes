@@ -29,6 +29,28 @@ using namespace /*name*/;
 std::cout << "Hello, world!" << std::endl;
 ```
 
+## Console I/O
+
+### `cout`
+
+```cpp
+int age = 20;
+cout << "I'm " << age << " years old." << endl;
+```
+
+### `cin`
+
+不太推荐，因为没有输入格式检查。
+
+课程中使用 Stanford Library 里的函数。
+
+| Function name | Example |
+| --- | --- |
+| `getInteger("Prompt")` | `int age = getInteger("How old are you? ");` |
+| `getReal("Prompt")` | `double gpa = getReal("少废话，你 GPA 多少？ ");` ![](../../../../images/tieba/le.png)|
+| `getLine("Prompt")` | `string name = getLine("What's your name? ");` |
+| `getYesOrNo("Prompt")`<br>`getYesOrNo("Prompt", "y", "n")` | `if (getYesOrNo("R U single? ")) {...}` |
+
 ## Forward declarations
 
 在函数定义之前声明函数，也称为函数原型（function prototype）

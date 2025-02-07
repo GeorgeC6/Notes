@@ -1,4 +1,4 @@
-mkdocs-material==9.5.27
+mkdocs-material==9.6.3
 mkdocs-minify-plugin==0.8.0
 mkdocs-statistics-plugin==0.1.2
 jieba==0.42.1

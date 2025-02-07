@@ -6,7 +6,12 @@
 - **semicolon** `;` ends a statement
 - **stream insertion operator** `<<` to push data to the console
 - **comments**:
-    - `/* */`
+    - `/* */`     
+        ```cpp
+        /*
+        * This is a multi-line comment
+        */
+        ```
     - `//`：单行注释
 - all statements must be inside of a function
 - functions are **not** always part of a class (unlike Java)

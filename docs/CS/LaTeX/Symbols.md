@@ -42,8 +42,8 @@
 | 与 | `\land` | $\land$ |
 | 或 | `\lor` | $\lor$ |
 | 非 | `\lnot` | $\lnot$ |
-| 充分 | `\implies` | $\implies$ |
-| 必要 | `\impliedby` | $\impliedby$ |
+| 充分 | `\implies`<br>`\Rightarrow` | $\implies$<br>$\Rightarrow$ |
+| 必要 | `\impliedby`<br>`\Leftarrow` | $\impliedby$<br>$\Leftarrow$ |
 | 充要 | `\iff`<br>`\Leftrightarrow` | $\iff$<br>$\Leftrightarrow$ |
 
 ## 大小关系
@@ -77,8 +77,8 @@
 
 ## 参考资料
 
-1. [The Comprehensive LaTeX Symbol List](https://ctan.org/pkg/comprehensive)
-2. [Glossary of mathematical symbols](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)
-3. [LaTeX 排版国标样式的数学符号](https://www.latexstudio.net/archives/51494.html)
+1. [The Comprehensive LaTeX Symbol List](https://ctan.org/pkg/comprehensive){target=_blank}
+2. [Glossary of mathematical symbols](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols){target=_blank}
+3. [LaTeX 排版国标样式的数学符号](https://www.latexstudio.net/archives/51494.html){target=_blank}
 
-[^1]: 国标要求的符号的弯曲方向是相反的。`amssymb` 提供了 `\backsim`，`unicode-math` 提供了 `\backsim` 和 `\backcong`，但是曲线部分仍略小于国标的样式。引自 [LaTeX 排版国标样式的数学符号](https://www.latexstudio.net/archives/51494.html)。
+[^1]: 国标要求的符号的弯曲方向是相反的。`amssymb` 提供了 `\backsim`，`unicode-math` 提供了 `\backsim` 和 `\backcong`，但是曲线部分仍略小于国标的样式。引自 [LaTeX 排版国标样式的数学符号](https://www.latexstudio.net/archives/51494.html){target=_blank}。

@@ -30,3 +30,10 @@
   .youtube {
     color: #EE0F0F;
   }
+
+  .custom-img {
+    width: 50px;              /* 或使用百分比，如 100% */
+    height: 50px;
+    object-fit: cover;         /* 保证图片裁剪后不变形 */
+    border-radius: 8px;        /* 设置圆角，数值可根据需求调整 */
+  }
