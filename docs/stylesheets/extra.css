@@ -31,7 +31,7 @@
     color: #EE0F0F;
   }
 
-  .custom-img {
+  .logo-img {
     width: 50px;              /* 或使用百分比，如 100% */
     height: 50px;
     object-fit: cover;         /* 保证图片裁剪后不变形 */
