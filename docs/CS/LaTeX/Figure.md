@@ -1,6 +1,6 @@
 # 图片排版
 
-> 引自帖子 ![](../../images/CC98_LOGO.png) [LaTeX中一些常见的图片排版组合方式](https://www.cc98.org/topic/5111533)
+> 引自帖子 ![](../../images/CC98_LOGO.png){.logo-img} [LaTeX中一些常见的图片排版组合方式](https://www.cc98.org/topic/5111533)
 
 ## 前置宏包
 
