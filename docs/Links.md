@@ -20,6 +20,18 @@
 
     Follow My Heart!( ง `ω´ )۶
 
+-   ![](https://avatars.githubusercontent.com/u/152982061?v=4){.logo-img} $\,$ [**JimmyEastBrook's Notebook**](https://iiiiling.github.io/notebook/){target=_blank}
+
+    ---
+
+    是吟游者~ :material-star:{.star}
+
+-   ![](https://mem.ac/static/a6cef06ac3267a5705afaaf9092d0c47/30cdc/avatar-8x.png){.logo-img} $\,$ [**memset0**](https://mem.ac){target=_blank}
+
+    ---
+
+    在海月的虚空中，纵身飞过秋凉的时鸟。
+
 -   ![](images/GeorgeSig.jpeg){.logo-img} $\,$ [**CC98 个人主页**](https://www.cc98.org/user/id/733259){target=_blank}
 
     ---

@@ -1,6 +1,6 @@
 site_name: George 的知识库
 site_author: George Cao
-site_url: https://georgec6.github.io/Notes/
+site_url: https://note.gorco.me/
 site_description: 一名力学僧的笔记站点~
 
 copyright: Copyright &copy; 2024 - 2025 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
@@ -121,6 +121,7 @@ plugins:
       type: iso_date
   - statistics:
       page_check_metadata: comment
+  - tags
 
 extra_javascript:
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
