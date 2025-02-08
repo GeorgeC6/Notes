@@ -1,8 +1,8 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
-      - master 
+      - master
       - main
 permissions:
   contents: write
@@ -28,4 +28,4 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip3 install -U -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force --target-branch gh-pages
