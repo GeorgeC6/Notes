@@ -11,13 +11,13 @@ theme:
   static_templates:
     - 404.html
   favicon: images/favicon.ico
-  # apple-touch-icon: images/Just LOGO.png
+  # apple-touch-icon: images/GeorgeSig.jpeg
   icon:
     logo: material/bookshelf
     repo: fontawesome/brands/github
   custom_dir: overrides
   features:
-    - header.autohide # 向下滚动时自动隐藏header
+    # - header.autohide # 向下滚动时自动隐藏header
     - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
     - navigation.tabs
     - navigation.top
@@ -61,7 +61,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/GeorgeC6
     - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/channel/UCq09adFYMyB4gRaUFYnVmhQ
+      link: https://www.youtube.com/@gorcomusic
     - icon: fontawesome/brands/soundcloud
       link: https://soundcloud.com/gorco
     - icon: fontawesome/brands/bilibili
@@ -121,7 +121,6 @@ plugins:
       type: iso_date
   - statistics:
       page_check_metadata: comment
-  - tags
 
 extra_javascript:
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -141,9 +140,6 @@ nav:
       - "Math/Calculus I/index.md"
     - 微积分 II: 
       - "Math/Calculus II/index.md"
-      - "专题讨论": 
-        - "Math/Calculus II/专题讨论/index.md"
-        - "关于级数1/n^2的讨论": "Math/Calculus II/专题讨论/关于级数1:n^2的讨论.md"
     - 线性代数: "Math/Linear-Algebra/intro.md"
     - "Special Functions: From Combinatorics to Calculus":
       - "Math/Special-Functions/index.md"
@@ -160,13 +156,20 @@ nav:
       - "杂记": 
         - "Math/Prob & Stat/Misc/index.md"
         - "协方差": "Math/Prob & Stat/Misc/Covariance.md"
+    - 计算方法:
+      - "Math/计算方法/index.md"
+      - "误差": "Math/计算方法/Error.md"
+      - "误差传播": "Math/计算方法/ErrorPropagation.md"
 
   - 物理:
     - 普通物理学 I: "Physics/Physics I/intro.md"
     - 普通物理学 II: "Physics/Physics II/intro.md"
     - 原子物理:
       - "Physics/Atommechanik/index.md"
-      - 课程论文: "Physics/Atommechanik/课程论文.md"
+    - 计算物理:
+      - "Physics/计算物理/index.md"
+      - "Intro": "Physics/计算物理/Week 1/Lec00.md"
+      - "Python 科学计算": "Physics/计算物理/Week 1/Lec01.md"
   
   - 数理方法:
     - "MathPhy/index.md"
@@ -179,6 +182,10 @@ nav:
     - "TheoMech/index.md"
     - 哈密顿力学: "TheoMech/Hamilton.md"
 
+  - 材料力学:
+    - "材料力学/index.md"
+    - "Chapter 1: Intro": "材料力学/Chapter1/Ch1.md"
+    - Chapter 2: "材料力学/Chapter2/Ch2.md"
   - CS:
     - "CS/index.md"
     - Python: 
@@ -208,6 +215,11 @@ nav:
         - "Lec 1: Functions": "CS/CS106B/Lectures/Lec 1/Functions.md"
       - Assignments:
         - A0: "CS/CS106B/Assignments/A0/a0.md"
+
+    - FDS:
+      - "CS/FDS/index.md"
+      - "Introduction": "CS/FDS/Lec00.md"
+      - "Algorithm Analysis": "CS/FDS/Lec01.md"
 
     - STM32: 
       - "CS/STM32/index.md"
@@ -255,4 +267,12 @@ nav:
       - Lec 6: "Others/无线网络应用/Lec 6.md"
       - Lec 7: "Others/无线网络应用/Lec 7.md"
       - 补充实验: "Others/无线网络应用/补充实验.md"
-    - 大学物理实验: "Others/大物实验/index.md"
+    - 电工电子学及实验:
+      - "Others/电工电子学及实验/index.md"
+      - 课程:
+        - 导论: "Others/电工电子学及实验/Lec00.md"
+        - 电路基础: "Others/电工电子学及实验/Lec01.md"
+    - 机械设计基础:
+      - "Others/机械设计基础/index.md"
+      - "Lec 1: Introduction": "Others/机械设计基础/Lec01.md"
+    - 创业基础: "Others/创业基础.md"

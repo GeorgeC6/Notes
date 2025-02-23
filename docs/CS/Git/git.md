@@ -31,5 +31,4 @@ git push origin main
 !!! tip "重命名文件夹但保留历史记录"
     ```bash
     git mv old_folder new_folder
-    git commit -m "Rename old_folder to new_folder"
     ```

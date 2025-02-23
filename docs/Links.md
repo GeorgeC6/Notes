@@ -32,6 +32,12 @@
 
     在海月的虚空中，纵身飞过秋凉的时鸟。
 
+-   ![](https://s2.loli.net/2024/08/14/UuaJ1elnkKgGChN.jpg){.logo-img} $\,$ [**嘎嘎's Notebook**](https://jybestow.github.io){target=_blank}
+
+    ---
+
+    是嘎嘎sama！
+
 -   ![](images/GeorgeSig.jpeg){.logo-img} $\,$ [**CC98 个人主页**](https://www.cc98.org/user/id/733259){target=_blank}
 
     ---
@@ -39,3 +45,15 @@
     小水怪一只 [ac06] 
 
 </div>
+
+!!! info "交换友链"
+    欢迎在评论区留下你的博客/笔记网站链接！🎉
+
+    我的友链信息：
+
+    ```markdown
+    title: George 的知识库
+    description: 一名力学僧的笔记站点~
+    url: https://note.gorco.me
+    avatar: https://note.gorco.me/images/GeorgeSig.jpeg
+    ```
