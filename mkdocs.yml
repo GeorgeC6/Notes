@@ -117,6 +117,7 @@ plugins:
   - minify:
       minify_html: true # 好像能加快网页加载速度？!
   - git-revision-date-localized:
+      enabled: !ENV [CI, false]
       enable_creation_date: true
       type: iso_date
   - statistics:
@@ -160,6 +161,11 @@ nav:
       - "Math/计算方法/index.md"
       - "误差": "Math/计算方法/Error.md"
       - "误差传播": "Math/计算方法/ErrorPropagation.md"
+      - "线性方程组解法": "Math/计算方法/LinearEq.md"
+      - "线性方程组迭代法": "Math/计算方法/LinEq(Iter).md"
+      - "范数": "Math/计算方法/norm.md"
+      - "共轭梯度法": "Math/计算方法/Gradient.md"
+      - "特征值与特征向量": "Math/计算方法/Eigen.md"
 
   - 物理:
     - 普通物理学 I: "Physics/Physics I/intro.md"
@@ -170,10 +176,22 @@ nav:
       - "Physics/计算物理/index.md"
       - "Intro": "Physics/计算物理/Week 1/Lec00.md"
       - "Python 科学计算": "Physics/计算物理/Week 1/Lec01.md"
+      - "误差分析": "Physics/计算物理/Week 2/Lec02.md"
+      - "经典数值计算": "Physics/计算物理/Week 2/Lec03.md"
+      - "线性代数的数值求解": "Physics/计算物理/Week 3/Lec05.md"
+      - "差分法求解微分方程": "Physics/计算物理/Week 4/Lec06.md"
+      - "蒙特卡洛方法": "Physics/计算物理/Week 5/Lec07.md"
+      - "复杂系统中的计算方法": "Physics/计算物理/Week 6/Lec08.md"
+
+    - 电动力学:
+      - "Physics/电动力学/index.md"
+      - "02-27": "Physics/电动力学/02-27.md"
+      - "03-20": "Physics/电动力学/03-20.md"
   
   - 数理方法:
     - "MathPhy/index.md"
     - "正交曲线系": "MathPhy/Curvilinear Coordinates.md"
+    - "连带勒让德函数": "MathPhy/LegendreAssociated.md"
     - 附录:
       - "MathPhy/Appendix/index.md"
       - "常用傅里叶变换/拉普拉斯变换": "MathPhy/Appendix/FT&LT.md"
@@ -185,7 +203,12 @@ nav:
   - 材料力学:
     - "材料力学/index.md"
     - "Chapter 1: Intro": "材料力学/Chapter1/Ch1.md"
-    - Chapter 2: "材料力学/Chapter2/Ch2.md"
+    - "Chapter 2: Tension & Compression": "材料力学/Chapter2/Ch2.md"
+    - "Chapter 3: Torsion": "材料力学/Chapter3/Ch3.md"
+    - "Chapter 4: Forces in Bending": "材料力学/Chapter4/Ch4.md"
+    - "Chapter 5: Stresses in Bending": "材料力学/Chapter5/Ch5.md"
+    - "Chapter 6: Deformations of Beams": "材料力学/Chapter6/Ch6.md"
+
   - CS:
     - "CS/index.md"
     - Python: 
@@ -220,6 +243,9 @@ nav:
       - "CS/FDS/index.md"
       - "Introduction": "CS/FDS/Lec00.md"
       - "Algorithm Analysis": "CS/FDS/Lec01.md"
+      - "Lists, Stacks, and Queues": "CS/FDS/Lec02.md"
+      - "Trees": "CS/FDS/Lec03.md"
+      - "Priority Queues": "CS/FDS/Lec04.md"
 
     - STM32: 
       - "CS/STM32/index.md"
@@ -272,7 +298,9 @@ nav:
       - 课程:
         - 导论: "Others/电工电子学及实验/Lec00.md"
         - 电路基础: "Others/电工电子学及实验/Lec01.md"
+        - 电路分析: "Others/电工电子学及实验/Lec02.md"
     - 机械设计基础:
       - "Others/机械设计基础/index.md"
       - "Lec 1: Introduction": "Others/机械设计基础/Lec01.md"
+      - "Chapter 2: 联接": "Others/机械设计基础/Ch2.md"
     - 创业基础: "Others/创业基础.md"

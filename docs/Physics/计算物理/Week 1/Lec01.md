@@ -37,6 +37,8 @@
     plt.show()
     ```
 
+    ![Lissajous Example](LissajousEx.png)
+
 ### Params
 
 #### `plt.plot`
