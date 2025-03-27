@@ -27,15 +27,17 @@ $$
 $$
 
 $$
+\begin{equation} \tag{1}
 \implies
-\left \{
-\begin{aligned} \tag{1}
-    x_1^{(k+1)} &= \frac{b_1 - a_{12} x_2^{(k)} - a_{13} x_3^{(k)}}{a_{11}} \\
-    x_2^{(k+1)} &= \frac{b_2 - a_{21} x_1^{(k)} - a_{23} x_3^{(k)}}{a_{22}} \\
-    x_3^{(k+1)} &= \frac{b_3 - a_{31} x_1^{(k)} - a_{32} x_2^{(k)}}{a_{33}}
-\end{aligned},
-\right.
-x^{(0)} = \left(x_1^{(0)}, x_2^{(0)}, x_3^{(0)}\right), k = 0, 1, 2, \ldots
+    \left \{
+    \begin{aligned}
+        x_1^{(k+1)} &= \frac{b_1 - a_{12} x_2^{(k)} - a_{13} x_3^{(k)}}{a_{11}} \\
+        x_2^{(k+1)} &= \frac{b_2 - a_{21} x_1^{(k)} - a_{23} x_3^{(k)}}{a_{22}} \\
+        x_3^{(k+1)} &= \frac{b_3 - a_{31} x_1^{(k)} - a_{32} x_2^{(k)}}{a_{33}}
+    \end{aligned},
+    \right.
+    \, x^{(0)} = \left(x_1^{(0)}, x_2^{(0)}, x_3^{(0)}\right), \, k = 0, 1, 2, \ldots
+\end{equation}
 $$
 
 一旦提供了 $x^{(0)}$，就可以通过迭代得到 $x^{(1)}, x^{(2)}, \ldots$ 的向量序列。若 $k \to \infty$ 时，$x^{(k)}$ 收敛到 $x^{*}$。$x^{*}$ 是 $Ax = b$ 的解吗？
@@ -68,8 +70,7 @@ $$
 
 此即为 **{==Jacobi 迭代法==}**。
 
-!!! question 何时有：
-
+!!! question "何时有：$x^{(k)} \to x^{*}$？"
     $$\lim_{k \to \infty} x^{(k)} = x^{*}, \quad Ax^{*} = b$$
 
     等价于
@@ -119,13 +120,15 @@ $$
 有新的值，就用新的值！
 
 $$
-\left \{
-\begin{aligned} \tag{5}
-x_1^{(k+1)} &= \frac{b_1 - a_{12} x_2^{(k)} - a_{13} x_3^{(k)}}{a_{11}} \\
-x_2^{(k+1)} &= \frac{b_2 - a_{21} x_1^{\textcolor{red}{(k+1)}} - a_{23} x_3^{(k)}}{a_{22}} \\
-x_3^{(k+1)} &= \frac{b_3 - a_{31} x_1^{\textcolor{red}{(k+1)}} - a_{32} x_2^{\textcolor{red}{(k+1)}}}{a_{33}}
-\end{aligned}
-\right.
+\begin{equation} \tag{5} \label{5}
+    \left \{
+    \begin{aligned}
+    x_1^{(k+1)} &= \frac{b_1 - a_{12} x_2^{(k)} - a_{13} x_3^{(k)}}{a_{11}} \\
+    x_2^{(k+1)} &= \frac{b_2 - a_{21} x_1^{\textcolor{red}{(k+1)}} - a_{23} x_3^{(k)}}{a_{22}} \\
+    x_3^{(k+1)} &= \frac{b_3 - a_{31} x_1^{\textcolor{red}{(k+1)}} - a_{32} x_2^{\textcolor{red}{(k+1)}}}{a_{33}}
+    \end{aligned}
+    \right.
+\end{equation}
 $$
 
 可以发现，新的值（红色）都在下三角 $L$，旧的值都在上三角 $U$。
