@@ -118,11 +118,13 @@ $$
 !!! example "受阻力的落体运动"
     $$\frac{dv}{dt} = g - kv^2$$
 
-    使用向前 Euler 公式 (\eqref{1})，得到
+    使用向前 Euler 公式 \eqref{1}，得到
 
     $$v_{n+1} = v_n + h \cdot (g - kv_n^2)$$
 
-    解析解：$$v(t) = \sqrt{\frac{g}{k}} \tanh{\left(2\sqrt{gk}t\right)}$$
+    解析解：
+    
+    $$v(t) = \sqrt{\frac{g}{k}} \tanh{\left(2\sqrt{gk}t\right)}$$
 
     取时间区间 $t \in [0.0, 10.0]$，分割为 $N = 10000$ 个时间步长，$g = 10$.
 

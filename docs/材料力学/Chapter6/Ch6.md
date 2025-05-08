@@ -46,6 +46,93 @@ $$
 得到
 
 $$
-\frac{d^2y}{dx^2} = \frac{M(x)}{E I}
+\pm \frac{d^2y}{dx^2} = \frac{M(x)}{E I}
 $$
+
+根据 $M(x)$ 的符号定义：
+
+- $M(x) > 0$：凸向下，$y'' > 0$
+- $M(x) < 0$：凸向上，$y'' < 0$
+
+可知 $M(x)$ 与 $y''$ 同号。故
+
+$$
+\begin{equation} \tag{1}
+\frac{d^2y}{dx^2} = \frac{M(x)}{E I}
+\end{equation}
+$$
+
+## 6.4 Beam Deformations by Integration
+
+对式 \eqref{1} 积分一次，
+
+$$
+EI \frac{dy}{dx} = \int M(x) \, \mathrm{d}x + C
+$$
+
+再积分一次，
+
+$$
+EI y = \iint M(x) \, \mathrm{d}x\mathrm{d}x + C_1 x + C_2
+$$
+
+### Boundary conditions
+
+- Rigidly fixed support（刚性固定支撑）
+
+![alt text](image-1.png)
+
+$$
+\begin{aligned}
+    \left. y \right|_{x = 0} &= 0 \\
+    \left. \theta \right|_{x = 0} &= 0
+\end{aligned}
+\quad \text{or} \quad
+\begin{aligned}
+    \left. y \right|_{x = 0} &= 0 \\
+    \left. y' \right|_{x = 0} &= 0
+\end{aligned}
+$$
+
+- Movable (or fixed) hinged support（活动或固定铰支撑）
+
+![alt text](image-2.png)
+
+$$
+\begin{aligned}
+    \left. y \right|_{x = 0} &= 0 \\
+    \left. y \right|_{x = l} &= 0
+\end{aligned}
+$$
+
+> 铰链不提供转矩！
+
+### Continuity conditions
+
+- Deflection
+
+![alt text](image-3.png)
+
+$$
+\left. y_1 \right|_{x = a} = \left. y_2 \right|_{x = a}
+$$
+
+- Angle of rotation
+
+![alt text](image-4.png)
+
+$$
+\left. \theta_1 \right|_{x = b} = \left. \theta_2 \right|_{x = b}
+\quad \text{or} \quad
+\left. y_1' \right|_{x = b} = \left. y_2' \right|_{x = b}
+$$
+
+## 6.5 Beam Deformations by Superposition
+
+在小变形假设下，$y$ 和 $\theta$ 都是外力的线性函数！
+
+!!! tip "结构形式叠加原理（逐段刚化法）"
+    外伸梁 = 简支梁 + 悬臂梁
+
+    
 

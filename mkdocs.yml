@@ -24,7 +24,7 @@ theme:
     - navigation.indexes  # 点击小节名字自动显示 index 界面
     - navigation.footer # 底部导航栏
     # - navigation.instant # 站内瞬移，但会导致公式跳转后不渲染
-    - navigation.instant.progress
+    # - navigation.instant.progress
     - toc.integrate   # 文档 toc 集成到总目录中
     - toc.follow  # 右侧目录跟随滚动
     - search.highlight
@@ -101,6 +101,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}
   - pymdownx.tasklist:
       custom_checkbox: true
   - admonition
@@ -120,11 +121,14 @@ plugins:
       enabled: !ENV [CI, false]
       enable_creation_date: true
       type: iso_date
+      timezone: Asia/Shanghai
+      exclude:
+        - index.md
   - statistics:
       page_check_metadata: comment
+      page_read_time: true
 
 extra_javascript:
-  # - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js   # MathJax 3
 
 extra_css:
@@ -166,6 +170,8 @@ nav:
       - "范数": "Math/计算方法/norm.md"
       - "共轭梯度法": "Math/计算方法/Gradient.md"
       - "特征值与特征向量": "Math/计算方法/Eigen.md"
+      - "插值法": "Math/计算方法/Interpolation.md"
+      - "函数逼近": "Math/计算方法/Fit.md"
 
   - 物理:
     - 普通物理学 I: "Physics/Physics I/intro.md"
@@ -182,11 +188,20 @@ nav:
       - "差分法求解微分方程": "Physics/计算物理/Week 4/Lec06.md"
       - "蒙特卡洛方法": "Physics/计算物理/Week 5/Lec07.md"
       - "复杂系统中的计算方法": "Physics/计算物理/Week 6/Lec08.md"
+      - "深度学习和计算物理": "Physics/计算物理/Week 8/Lec09.md"
 
     - 电动力学:
       - "Physics/电动力学/index.md"
       - "02-27": "Physics/电动力学/02-27.md"
       - "03-20": "Physics/电动力学/03-20.md"
+    
+    - 凝聚态物理专题:
+      - "Physics/凝聚态物理专题/index.md"
+      - "概述": "Physics/凝聚态物理专题/概述.md"
+      - "超导": "Physics/凝聚态物理专题/超导.md"
+      - "二维电子气": "Physics/凝聚态物理专题/二维电子气.md"
+      - "低维材料": "Physics/凝聚态物理专题/低维材料.md"
+      - "ARPES": "Physics/凝聚态物理专题/ARPES.md"
   
   - 数理方法:
     - "MathPhy/index.md"
@@ -208,6 +223,10 @@ nav:
     - "Chapter 4: Forces in Bending": "材料力学/Chapter4/Ch4.md"
     - "Chapter 5: Stresses in Bending": "材料力学/Chapter5/Ch5.md"
     - "Chapter 6: Deformations of Beams": "材料力学/Chapter6/Ch6.md"
+    - "Chapter 7: Stress and Strain Analysis & Strength Theory": "材料力学/Chapter7/Ch7.md"
+    - "Chapter 13: Energy Methods": "材料力学/Chapter13/Ch13.md"
+    - "Chapter 10: Dynamic Loads": "材料力学/Chapter10/Ch10.md"
+    - "Chapter 11: Alternating Stress": "材料力学/Chapter11/Ch11.md"
 
   - CS:
     - "CS/index.md"
@@ -246,6 +265,9 @@ nav:
       - "Lists, Stacks, and Queues": "CS/FDS/Lec02.md"
       - "Trees": "CS/FDS/Lec03.md"
       - "Priority Queues": "CS/FDS/Lec04.md"
+      - "Union-Find": "CS/FDS/Lec05.md"
+      - "Graphs": "CS/FDS/Lec06.md"
+      - "Sorting": "CS/FDS/Lec07.md"
 
     - STM32: 
       - "CS/STM32/index.md"
@@ -283,6 +305,7 @@ nav:
       - 机器学习 Pt.IV: "Others/Stat & Data/Lec 15.md"
       - 粒子物理实验中的统计学: "Others/Stat & Data/Lec 16.md"
       - Final Project: "Others/Stat & Data/Final Project/Final.md"
+
     - 无线网络应用:
       - "Others/无线网络应用/index.md"
       - Lec 1: "Others/无线网络应用/Lec 1.md"
@@ -293,14 +316,22 @@ nav:
       - Lec 6: "Others/无线网络应用/Lec 6.md"
       - Lec 7: "Others/无线网络应用/Lec 7.md"
       - 补充实验: "Others/无线网络应用/补充实验.md"
+
     - 电工电子学及实验:
       - "Others/电工电子学及实验/index.md"
       - 课程:
         - 导论: "Others/电工电子学及实验/Lec00.md"
         - 电路基础: "Others/电工电子学及实验/Lec01.md"
         - 电路分析: "Others/电工电子学及实验/Lec02.md"
+        - 分立元件基本电路: "Others/电工电子学及实验/第三章/Lec03.md"
+        - 数字集成电路: "Others/电工电子学及实验/第四章/Lec04.md"
+        - 集成运算放大器: "Others/电工电子学及实验/第五章/Lec05.md"
+        - 波形发生和变换: "Others/电工电子学及实验/第六章/Lec06.md"
+
     - 机械设计基础:
       - "Others/机械设计基础/index.md"
       - "Lec 1: Introduction": "Others/机械设计基础/Lec01.md"
       - "Chapter 2: 联接": "Others/机械设计基础/Ch2.md"
+      - "Chapter 6: 蜗轮蜗杆传动": "Others/机械设计基础/Ch6/Ch6.md"
+      - "Chapter 7: 轮系": "Others/机械设计基础/Ch7/Ch7.md"
     - 创业基础: "Others/创业基础.md"

@@ -1,5 +1,5 @@
 mkdocs-material==9.6.4
 mkdocs-minify-plugin==0.8.0
-mkdocs-statistics-plugin==0.1.2
+mkdocs-statistics-plugin==0.1.4
 jieba==0.42.1
 mkdocs-git-revision-date-localized-plugin==1.2.6

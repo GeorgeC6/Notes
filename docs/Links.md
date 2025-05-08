@@ -2,13 +2,13 @@
 
 <div class="grid cards" markdown>
 
--   ![](https://s2.loli.net/2025/02/06/F3tk6dCEMUB45Qn.png){.logo-img} $\,$ [**Ponyboy的个人博客**](https://ponyboy2005.github.io/){target=_blank}
+-   ![](https://s2.loli.net/2025/02/06/F3tk6dCEMUB45Qn.png){.logo-img} $\,$ [**Ponyboy 的个人博客**](https://ponyboy2005.github.io/){target=_blank}
 
     ---
 
     Stay alive.
 
--   ![](https://s2.loli.net/2024/10/19/CMapBlyNWkDsV6H.jpg){.logo-img} $\,$ [**LH的资源小站**](https://lh-0124.github.io/LHstudy){target=_blank}
+-   ![](https://s2.loli.net/2024/10/19/CMapBlyNWkDsV6H.jpg){.logo-img} $\,$ [**LH 的资源小站**](https://lh-0124.github.io/LHstudy){target=_blank}
 
     ---
 
@@ -37,12 +37,6 @@
     ---
 
     是嘎嘎sama！
-
--   ![](images/GeorgeSig.jpeg){.logo-img} $\,$ [**CC98 个人主页**](https://www.cc98.org/user/id/733259){target=_blank}
-
-    ---
-
-    小水怪一只 [ac06] 
 
 </div>
 

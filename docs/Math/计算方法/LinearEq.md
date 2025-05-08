@@ -240,7 +240,10 @@ P^{-1} =
 \equiv L
 $$
 
-所以 $$\boxed{A = LU}$$
+所以
+
+$$\boxed{A = LU}$$
+
 此即 **{==Doolittle 分解==}**，或 **{==LU 分解==}**。
 
 
@@ -330,6 +333,7 @@ $$A = LDL^T$$
 其中 $D$ 为对角阵，$L$ 为单位下三角阵。
 
 $3\times 3$ 矩阵 check：
+
 $$
 A =
 \begin{bmatrix}
