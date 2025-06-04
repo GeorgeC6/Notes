@@ -234,3 +234,161 @@ $$
 > Mergesort requires linear extra memory, and copying an array is slow.
 >
 > It is hardly ever used for internal sorting, but is quite useful for **external sorting**.
+
+## Quicksort
+
+> The **fastest** known sorting algorithm in practice.
+
+### The Algorithm
+
+1. Choose a **pivot** element from the array.
+2. Partition the array into two subarrays:
+    - Elements less than the pivot
+    - Elements greater than the pivot
+3. Recursively sort the subarrays.
+4. Combine the sorted subarrays and the pivot into a single sorted array.
+
+### Picking the Pivot
+
+- A WRONG way: pick the first element `A[0]`
+    - If `A[]` is already sorted, the algorithm will take $\mathcal{O}(N^2)$ time to do nothing!
+- A Safe Maneuver: pick randomly
+    - random number generation is expensive!
+- **Median-of-Three Partitioning**
+    - Pivot = median(`A[0]`, `A[N/2]`, `A[N-1]`)
+
+### Partitioning Strategy
+
+1. 把 pivot 放到数组的最后面
+2. 设定两个指针 `i` 和 `j`，
+    - `i` 指向数组的第一个元素
+    - `j` 指向数组的倒数第二个元素（pivot 前面一个元素）
+3. 将 `i` 和 `j` 指向的元素与 pivot 比较
+    - `i < pivot`，`j > pivot`，则 `i` 向右移动，`j` 向左移动
+    - `i < pivot`，`j < pivot`，则 `i` 向右移动，`j` 不动
+    - `i > pivot`，`j > pivot`，则 `i` 不动，`j` 向左移动
+    - `i > pivot`，`j < pivot`，则交换 `A[i]` 和 `A[j]`
+4. 直到 `i > j`，结束
+
+### Small Array
+
+For small arrays (`N` < 20 ), quick sort is slower than insertion sort.
+
+```c
+ElementType Median3(ElementType A[], int Left, int Right)
+{
+    int Center = (Left + Right) / 2;
+    if (A[Left] > A[Center])
+        Swap(&A[Left], &A[Center]);
+    if (A[Left] > A[Right])
+        Swap(&A[Left], &A[Right]);
+    if (A[Center] > A[Right])
+        Swap(&A[Center], &A[Right]); // 比较三者大小，顺便排好序
+    Swap(&A[Center], &A[Right - 1]); // Place pivot at position Right - 1，因为 pivot 已经比 Right 小了！
+    return A[Right - 1];
+}
+```
+
+```c
+void QSort(ElementType A[], int Left, int Right)
+{
+    int i, j;
+    ElementType Pivot;
+    if (Left + Cutoff <= Right) // not small array
+    {
+        Pivot = Median3(A, Left, Right);
+        i = Left;
+        j = Right - 1; // Why not set i = Left + 1 and j = Right - 2 ?
+        for (;;)
+        {
+            while (A[++i] < Pivot) {} // i 已经先走到了 Left + 1
+            while (A[--j] > Pivot) {} // j 已经先走到了 Right - 2
+            if (i < j)
+                Swap(&A[i], &A[j]);
+            else
+                break;
+        }
+        Swap(&A[i], &A[Right - 1]); // Restore pivot
+        QSort(A, Left, i - 1);
+        QSort(A, i + 1, Right);
+    }
+    else
+        InsertionSort(A + Left, Right - Left + 1);
+}
+```
+
+### Analysis
+
+$$
+T(N) = T(i) + T(N - i - 1) + cN
+$$
+
+- $T(i)$ is the time to sort the left subarray
+- $T(N - i - 1)$ is the time to sort the right subarray
+- $cN$ is the time to partition the array
+
+- Worst case: $T(N) = T(N - 1) + cN$
+    - $T(N) = \mathcal{O}(N^2)$
+- Best case: $T(N) = T(N/2) + cN$
+    - $T(N) = \mathcal{O}(N \log N)$
+- Average case: assume the average value of $T(i)$ is $\frac{1}{N} \sum_{i=0}^{N-1} T(i)$
+
+$$
+T(N) = \frac{2}{N} \sum_{i=0}^{N-1} T(i) + cN \implies T(N) = \mathcal{O}(N \log N)
+$$
+
+!!! example "Example"
+    Given a list of $N$ elements and an integer $k$, find the $k$-th largest element.
+
+    - Heap sort: $\mathcal{O}(N + N \log N)$
+    - Quicksort: $\mathcal{O}(N\log N)$（假如 pivot 每次都选到很中间，就类似于二分查找）
+
+## Sorting Large Structures
+
+Problem: Swapping large structures can be very expensive.
+Solution: Add a pointer field to the structure and swap the pointers instead. $\implies$ **indirect sorting**.
+
+!!! example "Tabel Sort"
+    | list | `[0]` | `[1]` | `[2]` | `[3]` | `[4]` | `[5]` |
+    |:---:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+    | key | `d` | `b` | `f` | `c` | `a` | `e` |
+    | table | `4` | `1` | `3` | `0` | `5` | `2` |
+
+    The sorted list is `list[table[0]]`, `list[table[1]]`, $\ldots$, `list[table[N-1]]`.
+
+    Note: Every permutation is made up of disjoint cycles.
+
+    In the worst case there are $\lfloor \frac{N}{2} \rfloor$ cycles（每个元素自己算一个的话那已经排好序了）, and requires $N + \lfloor \frac{N}{2} \rfloor$ record moves.
+
+    $T = \mathcal{O}(mN)$, where $m$ is the size of structures.
+
+## A General Lower Bound for Sorting
+
+!!! note "Theorem"
+    Any algorithm that sorts by comparisons only must have a worst case computing time of $\Omega(N \log N)$.
+
+    ***Proof.***
+
+    When sorting $N$ distinct elements, there are $N!$ different possible results. Thus any decision tree must have at least $N!$ leaves.
+
+    If the height of the tree is $k$, then in a complete binary tree $N! \leq 2^{k-1} \iff k \geq \log_2 N! + 1$.
+
+    $$
+    N! \geq (N/2)^{N/2} \implies \log_2 N! \geq \frac{N}{2} \log_2 \frac{N}{2} = \Theta (N \log N)
+    $$
+
+    Therefore $T(N) = k \geq c \cdot N \log N$.
+
+## Bucket Sort and Radix Sort
+
+!!! example "Bucket Sort"
+    $N$ 个学生，成绩范围 $[0, 100]$（共 $M = 101$ 种可能取值），按成绩排序。能在线性时间里完成吗？
+
+    设定 $100$ 个桶，$T(N) = \mathcal{O}(N + M)$，$M$ 是桶的个数。适合 $N \gg M$ 的情况。
+
+    What if $N \ll M$? 
+
+!!! example "Radix Sort"
+    Given $N = 10$ integers in the range $0$ to $999$ ($M = 1000$). Is it possible to sort them in linear time?
+
+    Sort according to the **L**east **S**ignificant **D**igit (LSD) first.

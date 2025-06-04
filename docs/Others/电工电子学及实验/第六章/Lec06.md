@@ -14,10 +14,22 @@ $$
 \boldsymbol{A}\boldsymbol{F} = 1
 $$
 
+555 定时器
+
+1、7引脚相当于电子开关
+
 ## 6.2 多谐振荡器
 
 
+
+
 ## 6.3 单稳态触发器和 Schmitt 触发器
+
+$$
+t_{\text{w}} = RC \ln 3 \approx 1.1 RC
+$$
+
+Schmitt 触发器：滞回
 
 ### 6.3.1 单稳态触发器
 
