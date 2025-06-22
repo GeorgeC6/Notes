@@ -3,3 +3,4 @@ mkdocs-minify-plugin==0.8.0
 mkdocs-statistics-plugin==0.1.4
 jieba==0.42.1
 mkdocs-git-revision-date-localized-plugin==1.2.6
+mkdocs-glightbox

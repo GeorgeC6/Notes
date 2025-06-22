@@ -187,7 +187,7 @@ $$
 \int_a^b \rho(x) f(x) \,\mathrm{d}x \approx \sum_{i=1}^n A_i f(x_i)
 $$
 
-其中 $\rho(x) \geq 0$ 是固定的权函数。上面的求积公式要有 $m$ 次代数精度，充要条件是上式对 $x^l, \, l = 0, 1, \ldots, m$ 精确成立。
+其中 $\rho(x) \geq 0$ 是固定的权函数。上面的求积公式要有 $m$ 次代数精度，充要条件是上式对 $x^l, \, l = 0, 1, \ldots, m$ 精确成立。记 $\mu_l = \int_a^b \rho(x) x^l \,\mathrm{d}x$，则有
 
 $$
 \left \{
@@ -224,6 +224,8 @@ $$
 $$
 \int_a^b \rho(x) p_{2n-1}(x) \,\mathrm{d}x = \int_a^b \rho(x) r_{n-1}(x) \,\mathrm{d}x
 $$
+
+$x_1, x_2, \ldots, x_n$ 已经有了，调整 $A_k$ 使得
 
 满足这些条件的积分公式
 

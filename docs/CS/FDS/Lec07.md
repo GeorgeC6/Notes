@@ -187,7 +187,7 @@ void MSort(ElementType A[], ElementType TmpArray[], int Left, int Right)
         Center = (Left + Right) / 2;
         MSort(A, TmpArray, Left, Center);
         MSort(A, TmpArray, Center + 1, Right);
-        Merge(A, TmpArray, Left, Center + 1, Right); #(1)
+        Merge(A, TmpArray, Left, Center + 1, Right); //(1)
     }
 }
 ```

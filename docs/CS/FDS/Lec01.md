@@ -138,7 +138,7 @@ If $T_1(N) = \mathcal{O}(f(N))$ and $T_2(N) = \mathcal{O}(g(N))$, then:
 !!! example "最大子串和"
     Given (possibly negative) integers $A_1, A_2, \cdots, A_N$, find the maximum sum of a subsequence.
 
-    ```c {.line-numbers} title="Algorithm 1"
+    ```c linenums="1" title="Algorithm 1"
     int maxsum(const int A[], int N)
     {
         int max = 0, sum;
@@ -176,13 +176,13 @@ If $T_1(N) = \mathcal{O}(f(N))$ and $T_2(N) = \mathcal{O}(g(N))$, then:
     \end{aligned}
     $$
 
-    ```c {.line-numbers} title="Algorithm 2: Divide and Conquer"
+    ```c linenums="1" title="Algorithm 2: Divide and Conquer"
     /*  */
     ```
 
     - $T(N) = \mathcal{O}(N \log N)$
 
-    ```c {.line-numbers} title="Algorithm 3: On-line"
+    ```c linenums="1" title="Algorithm 3: On-line" hl_lines="9-10"
     int maxsum(const int A[], int N)
     {
         int max = 0, sum = 0;

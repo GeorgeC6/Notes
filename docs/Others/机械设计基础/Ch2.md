@@ -43,7 +43,7 @@
     ![alt text](image-1.png)
 
 - 螺纹升角 $\lambda$
-    - $tan \lambda = \frac{nP}{\pi d_2}$
+    - $\tan \lambda = \frac{nP}{\pi d_2}$
 - 牙型角 $\alpha$
 - 牙侧角 $\beta$
 

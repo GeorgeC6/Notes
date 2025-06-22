@@ -30,6 +30,9 @@ array[$i$] = $\mathrm{item}_i$ (Sequential Mapping)
 
 ### Linked Lists
 
+!!! info inline ""
+    ![alt text](image-1.png)
+
 | Address | Data | Pointer |
 | :-----: | :--: | :-----: |
 | 0010 | SUN | 1011 |
@@ -258,8 +261,8 @@ Algorithm
 - Infix: $a + b * c - d / e$
 - Prefix: $- + a * bc / de$
 - **Postfix**: $abc * + de / -$
-  - aka. Reverse Polish Notation (RPN)
-  - 方便计算机计算：运算符位置越靠前，优先级越高
+    - aka. Reverse Polish Notation (RPN)
+    - 方便计算机计算：运算符位置越靠前，优先级越高
 
 ##### Infix to Postfix Conversion
 

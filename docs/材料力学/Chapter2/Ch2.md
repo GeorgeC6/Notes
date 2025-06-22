@@ -294,4 +294,16 @@ $$u = \frac{U}{V} = \frac{P \Delta /2}{Al} = \frac{1}{2}\sigma \varepsilon = \fr
 - Constitutive equation
 - Compatibility equation
     - 变形协调方程，几何约束
+- Complementary equation
+    - 将变形协调方程代入本构关系，得到补充方程（理论力学得不到的方程）
+
+## 2.8 Thermal Stress
+
+$$
+\Delta l_\mathrm{T} = \alpha l \Delta T
+$$
+
+## 2.9 Assembly Stress
+
+Assembly stress only exists in statically indeterminate structures with manufacturing error.
 
