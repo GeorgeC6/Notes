@@ -5,8 +5,8 @@
   --md-footer-fg-color:                rgba(0, 0, 0, 1);
   --md-footer-fg-color--light:         rgba(0, 0, 0, 0.8);
   --md-footer-fg-color--lighter:       rgba(0, 0, 0, 0.6);
-  --md-footer-bg-color:                rgb(216, 213, 200);
-  --md-footer-bg-color--dark:          rgba(216, 213, 200, 0.7);
+  --md-footer-bg-color:                rgb(243, 243, 243, 0.7);
+  --md-footer-bg-color--dark:          rgba(243, 243, 243);
 }
 
 [data-md-color-scheme="slate"] {
