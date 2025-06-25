@@ -302,6 +302,7 @@ nav:
 
     - HPC101:
       - "CS/HPC101/index.md"
+      - "Lec 1: 概述": "CS/HPC101/Lec00/Overview.md"
 
   - 音乐:
     - "Music/index.md"
