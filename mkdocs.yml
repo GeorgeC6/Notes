@@ -303,6 +303,9 @@ nav:
     - HPC101:
       - "CS/HPC101/index.md"
       - "Lec 1: 概述": "CS/HPC101/Lec00/Overview.md"
+      - "Lec 2: 集群软硬件及运维基础": "CS/HPC101/Lec01/Cluster.md"
+      - "Lec 3: HPC 中的计算机系统": "CS/HPC101/Lec02/HPC_CS_1.md"
+      - "Lec 4: HPC 中的计算机系统 (Pt. II)": "CS/HPC101/Lec02/HPC_CS_2.md"
 
   - 音乐:
     - "Music/index.md"
