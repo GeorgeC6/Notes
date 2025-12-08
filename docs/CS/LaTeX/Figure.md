@@ -5,8 +5,6 @@
 ## 前置宏包
 
 ```latex
-\documentclass{ctexart}
-\usepackage[left=1cm, right=1cm]{geometry}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{caption}

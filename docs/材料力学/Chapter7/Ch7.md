@@ -51,7 +51,7 @@ $$
 \begin{equation} \tag{7-1}
 \boxed{
 \begin{aligned}
-\sigma_{\alpha} &= \frac{\sigma_x + \sigma_y}{2} + \frac{\sigma_x - \sigma_y}{2} \cos 2\alpha + \tau_{xy} \sin 2\alpha \\
+\sigma_{\alpha} &= \frac{\sigma_x + \sigma_y}{2} + \frac{\sigma_x - \sigma_y}{2} \cos 2\alpha - \tau_{xy} \sin 2\alpha \\
 \tau_{\alpha} &= \frac{\sigma_x - \sigma_y}{2} \sin 2\alpha + \tau_{xy} \cos 2\alpha
 \end{aligned}
 }

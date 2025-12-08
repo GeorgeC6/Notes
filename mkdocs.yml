@@ -23,9 +23,10 @@ theme:
     - navigation.top
     - navigation.indexes  # 点击小节名字自动显示 index 界面
     - navigation.footer # 底部导航栏
+    - navigation.prune
     # - navigation.instant # 站内瞬移，但会导致公式跳转后不渲染
     # - navigation.instant.progress
-    - toc.integrate   # 文档 toc 集成到总目录中
+    # - toc.integrate   # 文档 toc 集成到总目录中
     - toc.follow  # 右侧目录跟随滚动
     - search.highlight
     - search.share
@@ -115,7 +116,10 @@ markdown_extensions:
 
 plugins:
   - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang:
+        - zh
+        - en
+  - optimize
   - minify:
       minify_html: true # 好像能加快网页加载速度？!
   - git-revision-date-localized:
@@ -179,6 +183,11 @@ nav:
       - "数值微分积分": "Math/计算方法/DerInt.md"
       - "非线性方程的解法": "Math/计算方法/NonlinearEq.md"
       - "常微分方程组数值解": "Math/计算方法/ODE.md"
+    - 渐近法与摄动理论:
+      - "Math/渐近法与摄动理论/index.md"
+      - "ODE 回顾": "Math/渐近法与摄动理论/Lec01.md"
+      - "微分方程与差分方程": "Math/渐近法与摄动理论/Lec02.md"
+      - "局域分析": "Math/渐近法与摄动理论/Lec03.md"
 
   - 物理:
     - 普通物理学 I: "Physics/Physics I/intro.md"
@@ -213,6 +222,20 @@ nav:
       - "极端条件与关联电子": "Physics/凝聚态物理专题/极端条件与关联电子.md"
       - "NMR 与 muSR": "Physics/凝聚态物理专题/NMR.md"
       - "复杂系统的统计物理": "Physics/凝聚态物理专题/复杂系统的统计物理.md"
+    
+    - 量子力学:
+      - "Physics/量子力学/index.md"
+      - "第一章 波函数": "Physics/量子力学/Ch1.md"
+      - "第二章 定态薛定谔方程": "Physics/量子力学/Ch2.md"
+      - "第三章 形式理论": "Physics/量子力学/Ch3.md"
+      - "第四章 三维空间中的量子力学": "Physics/量子力学/Ch4.md"
+      - "第五章 全同粒子": "Physics/量子力学/Ch5.md"
+      - "第六章 对称性与守恒律": "Physics/量子力学/Ch6.md"
+      - "第七章 定态微扰理论": "Physics/量子力学/Ch7.md"
+
+    - 热力学与统计物理:
+      - "09-24": "Physics/热力学统计/9_24.md"
+      - "10-15": "Physics/热力学统计/10_15.md"
   
   - 数理方法:
     - "MathPhy/index.md"
@@ -240,6 +263,42 @@ nav:
     - "Chapter 11: Alternating Stress": "材料力学/Chapter11/Ch11.md"
     - "Chapter 9: Stability of Columns": "材料力学/Chapter9/Ch9.md"
     - "Chapter 15: Curved Beams": "材料力学/Chapter15/Ch15.md"
+
+  - 弹性力学:
+    - "弹性力学/index.md"
+    - "绪论": "弹性力学/Lec01.md"
+    - "第二章 应力状态理论": "弹性力学/Ch2.md"
+    - "第三章 应变状态理论": "弹性力学/Ch3.md"
+    - "第四章 应力应变关系": "弹性力学/Ch4.md"
+    - "第五章 弹性力学问题的建立和一般原理": "弹性力学/Ch5.md"
+    - "第六章 平面问题": "弹性力学/Ch6.md"
+    - "第七章 平面问题的极坐标解答": "弹性力学/Ch7.md"
+    - "第九章 柱形杆的扭转和弯曲": "弹性力学/Ch9.md"
+    - "第十章 空间问题": "弹性力学/Ch10.md"
+    - "第十一章 热应力": "弹性力学/Ch11.md"
+
+  - 振动力学:
+    - "振动力学/index.md"
+    - "阻尼振动": "振动力学/Lec01.md"
+    - "谐和激励": "振动力学/Lec02.md"
+    - "一般激励": "振动力学/Lec03.md"
+    - "线性随机振动": "振动力学/Lec04.md"
+    - "多自由度线性系统": "振动力学/Lec05.md"
+    - "振动近似计算方法": "振动力学/Lec06.md"
+    - "连续系统振动": "振动力学/Lec07.md"
+
+  - 流体力学:
+    - "流体力学/index.md"
+    - "绪论": "流体力学/Lec00.md"
+    - "流体运动学": "流体力学/Lec01.md"
+    - "流体静力学": "流体力学/Lec02.md"
+    - "流体力学基本方程": "流体力学/Lec03.md"
+    - "量纲分析与相似律": "流体力学/Lec04.md"
+    - "涡动力学基础": "流体力学/Lec05.md"
+    - "粘性层流精确解": "流体力学/Lec06.md"
+    - "边界层理论基础": "流体力学/Lec07.md"
+    - "湍流理论": "流体力学/Lec08.md"
+
 
   - CS:
     - "CS/index.md"
@@ -305,7 +364,12 @@ nav:
       - "Lec 1: 概述": "CS/HPC101/Lec00/Overview.md"
       - "Lec 2: 集群软硬件及运维基础": "CS/HPC101/Lec01/Cluster.md"
       - "Lec 3: HPC 中的计算机系统": "CS/HPC101/Lec02/HPC_CS_1.md"
-      - "Lec 4: HPC 中的计算机系统 (Pt. II)": "CS/HPC101/Lec02/HPC_CS_2.md"
+      - "Lec 4: HPC 中的计算机系统 (Pt. II)": "CS/HPC101/Lec03/HPC_CS_2.md"
+      - "Lec 5: 向量化计算": "CS/HPC101/Lec04/Vectorization.md"
+      - "Lec 6: CUDA C": "CS/HPC101/Lec05/CUDA_C.md"
+      - "Lec 6.5: CUDA C Lab": "CS/HPC101/Lec05/CUDA_C_Lab.md"
+      - "Lec 7: OpenMP/MPI": "CS/HPC101/Lec06/OpenMP.md"
+      - "Lec 8: C++ 并行编程": "CS/HPC101/Lec07/C++_Concurrency.md"
 
   - 音乐:
     - "Music/index.md"
@@ -369,3 +433,10 @@ nav:
       - "Chapter 6: 蜗轮蜗杆传动": "Others/机械设计基础/Ch6/Ch6.md"
       - "Chapter 7: 轮系": "Others/机械设计基础/Ch7/Ch7.md"
     - 创业基础: "Others/创业基础.md"
+    - 智柔体力学概论:
+      - "Others/智柔体力学概论/index.md"
+      - "Lec 1: Introduction": "Others/智柔体力学概论/Lec01.md"
+      - "Lec 2: 软离子器件力学": "Others/智柔体力学概论/Lec02.md"
+    - 连续介质力学:
+      - "Others/连续介质力学/index.md"
+      - "张量": "Others/连续介质力学/Tensor.md"

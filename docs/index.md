@@ -11,7 +11,22 @@ hide:
 
 这里是我所有电子版笔记和课程相关资源的汇总。
 
-??? stat inline end "站点统计"
+!!! info inline "Tips"
+    若有错误之处或可以改进的地方，欢迎指出[:material-open-in-new:](https://github.com/GeorgeC6/Notes)！:octicons-heart-fill-24:{ .heart }
+
+??? tip inline end "快捷键"
+    您可使用键盘快捷键浏览本站点：
+
+    -   全局（除了在搜索框时）：
+        -   ++slash++, ++f++, ++s++：打开搜索框
+        -   ++p++, ++comma++：前往上一页
+        -   ++n++, ++period++：前往下一页
+    -   处于搜索框时：
+        -   ++arrow-down++, ++arrow-up++：选择下/上一条搜索结果
+        -   ++esc++, ++tab++：退出搜索框
+        -   ++enter++：打开选中的搜索结果
+
+???+ stat "站点统计"
     :material-file-document: 页数：{{ pages }}
     
     :material-text: 字数：{{ words }}
@@ -19,9 +34,6 @@ hide:
     :fontawesome-solid-code: 代码：{{ codes }}
     
     :material-clock-outline: 网站运行时间：<span id="web-time"></span>
-
-!!! info "Tips"
-    若有错误之处或可以改进的地方，欢迎指出！:octicons-heart-fill-24:{ .heart }
 
 ## 许可
 
