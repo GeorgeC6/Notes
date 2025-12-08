@@ -27,5 +27,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+      - name: Install pngquant
+        run: sudo apt-get install -y pngquant
       - run: pip3 install -U -r requirements.txt
       - run: mkdocs gh-deploy --force
