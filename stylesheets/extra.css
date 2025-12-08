@@ -1,6 +1,6 @@
 [data-md-color-scheme="default"] {
   --md-default-bg-color: #eeeada;
-
+  
   /* footer */
   --md-footer-fg-color:                rgba(0, 0, 0, 1);
   --md-footer-fg-color--light:         rgba(0, 0, 0, 0.8);
@@ -13,6 +13,14 @@
   --md-default-bg-color: #0e1116;
 }
 
+.md-grid {
+  max-width: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+}
+
 .md-typeset .admonition,
 .md-typeset details {
   border-width: 0;
@@ -20,6 +28,7 @@
 }
 
 :root {
+  --md-text-font: "LXGW WenKai";
   /* stat */
   --md-admonition-icon--stat: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chart-line</title><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z" /></svg>');
   /* abstract */
