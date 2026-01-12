@@ -38,6 +38,12 @@
 
     是嘎嘎sama！
 
+-   ![](https://dongjiacheng06.github.io/assets/images/personal_photo.jpg){.logo-img} $\,$ [**Jiacheng**](https://dongjiacheng06.github.io){target=_blank}
+
+    ---
+
+    Focus on world model, 3D computer vision, artificial intelligence
+
 </div>
 
 !!! info "交换友链"
@@ -45,7 +51,7 @@
 
     我的友链信息：
 
-    ```markdown
+    ```yaml
     title: George 的知识库
     description: 一名力学僧的笔记站点~
     url: https://note.gorco.me

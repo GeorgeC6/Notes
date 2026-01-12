@@ -91,7 +91,7 @@ $\psi(x)$ 满足的边界条件（固定端）：$\begin{cases}
     \psi(0) = 0 \\
     \psi'(0) = 0 \\
     \psi(L) = 1
-s\end{cases}$
+\end{cases}$
 
 若加一集中质量 $m$，则动能多一项，势能不变
 

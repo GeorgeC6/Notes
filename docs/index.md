@@ -12,7 +12,7 @@ hide:
 这里是我所有电子版笔记和课程相关资源的汇总。
 
 !!! info inline "Tips"
-    若有错误之处或可以改进的地方，欢迎指出[:material-open-in-new:](https://github.com/GeorgeC6/Notes)！:octicons-heart-fill-24:{ .heart }
+    若有错误之处或可以改进的地方，欢迎指出[:material-open-in-new:](https://github.com/GeorgeC6/Notes){.target="_blank"} !:octicons-heart-fill-24:{ .heart }
 
 ??? tip inline end "快捷键"
     您可使用键盘快捷键浏览本站点：

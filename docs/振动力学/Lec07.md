@@ -155,3 +155,98 @@ $$
     \end{aligned}
 \right.
 $$
+
+
+!!! note "变截面梁纵向自由振动"
+    分离变量法 $u(x, t) = U(x) T(t)$ 
+
+
+## 梁横向振动
+
+$$
+\begin{equation}
+    \rho(x) A(x) \frac{\partial^2 y}{\partial t^2} + \frac{\partial^2}{\partial x^2} \left[ E(x) I(x) \frac{\partial^2 y}{\partial x^2} \right] = f(x,t) \qquad (\text{in } \Omega)
+\end{equation}
+$$
+
+1.  初始条件
+
+    $$
+    y(x, t_0) = \varphi(x) , \quad \left.\frac{\partial y}{\partial t} \right|_{t=t_0} = \psi(x).
+    $$
+
+2.  边界条件（$x = 0$）
+
+    $$
+    \left \{
+        \begin{aligned}
+            &\text{固支：} &&y(0, t) = 0 , \quad \theta(0, t) = 0 \\[1ex]
+            &\text{简支：} &&y(0, t) = 0 , \quad M(0, t) = 0 \\[1ex]
+            &\text{自由：} &&Q(0, t) = 0 , \quad M(0, t) = 0 \\[1ex]
+            &\text{夹支：} &&\theta(0, t) = 0 , \quad Q(0, t) = 0 \\[1ex]
+            &\text{弹性支撑：} &&Q(0, t) = (\pm ?)\, k_1 y(0, t) , \quad M(0, t) = (\pm ?)\, k_2 \theta(0, t) \\[1ex]
+            &\text{集中质量：} &&Q(0, t) = (\pm ?)\, M \frac{\partial^2 y}{\partial t^2}\bigg|_{x=0} , \quad M(0, t) = \underset{\text{一般可忽略}}{\cancel{(\pm ?)\, J \frac{\partial^2 \theta}{\partial t^2}\bigg|_{x=0}}}
+        \end{aligned}
+    \right.
+    $$
+
+    算上 $x = l$，共 $6 \times 6 = 36$ 种边界条件.
+
+### 求解步骤
+
+1.  边界条件齐次化！
+    - 找到只需满足边界条件的特解 $\psi(x, t)$，令 $y(x, t) = \tilde{y}(x, t) + \psi(x, t)$，则 $\tilde{y}(x, t)$ 满足齐次边界条件.
+2.  齐次方程 + 齐次边界条件 $\implies$ 特征值问题 $\left\{\begin{array}{c} \omega_1, & \omega_2, &\ldots \\ \varphi_1(x), & \varphi_2(x), &\ldots \end{array}\right\}$
+    
+    :material-star:{.star} **正交性**
+
+    $$
+    \left \{
+    \begin{align}
+        &\int_0^l \rho(x) A(x) \varphi_i(x) \varphi_j(x) \, \mathrm{d} x = \begin{cases}
+            0 , & i \neq j \\[1ex]
+            M_i , & i = j
+        \end{cases} \\
+        &\int_0^l E(x) I(x) \varphi_i''(x) \varphi_j''(x) \, \mathrm{d} x = \begin{cases}
+            0 , & i \neq j \\[1ex]
+            K_i , & i = j
+        \end{cases} \\
+        & K_i = \omega_i^2 M_i
+    \end{align}
+    \right.
+    $$
+
+3.  振型叠加法求解：$\displaystyle y(x, t) = \sum_{i=1}^\infty q_i(t) \varphi_i(x)$，$q_i(t)$ 为完备基 $\{\varphi_i\}$ 的广义坐标
+
+
+!!! tip "几个定性结论"
+    1.  第 $n$ 阶振型有 $n-1$ 个节点
+        - 对所有 $6 \times 6 = 36$ 种边界条件均成立！
+        - 对任意梁（$E(x), I(x), \rho(x), A(x)$ 可变）均成立！
+        - 对任意杆、轴、弦振动均成立！
+        - 甚至对于串联（离散）系统都成立！
+    2.  关于频率
+        - 连续系统无重频！
+        - 频率 $0 \leq \omega_1 < \omega_2 < \cdots < \omega_n \quad (n \to \infty)$
+            - 无约束系统可能取等号
+    3.  振型节点的交错性
+        1.  任意相邻两个振型（第 $n$ 阶和第 $n+1$ 阶）的节点相互交错
+            - 第 $n$ 阶的两个相邻节点之间，肯定有一个 $n+1$ 阶的节点
+            - 第 $n+1$ 阶的两个相邻节点之间，肯定有一个 $n$ 阶的节点
+        2. 任意同阶的**位移**与**转角**振型的节点相互交错
+        3. 任意同阶的**转角**与**弯矩**振型的节点相互交错（仅对于梁）
+        4. 任意同阶的**弯矩**与**剪力**振型的节点相互交错（仅对于梁）
+    4.  杆、轴、弦存在无穷多个频率、振型，但只有 $\textcolor{tomato}{2}$ 个振型是独立的！
+        
+        - 在设计的时候，需要对振型的节点做调控。这是一种反问题。
+    
+        $$
+        \begin{aligned}
+            \lambda_j \varphi_j \cdot \frac{\mathrm{d}}{\mathrm{d} x} \left[E(x) A(x) \frac{\mathrm{d} \varphi_i}{\mathrm{d} x}\right] &= \lambda_j \varphi_j \cdot \lambda_i \rho(x) A(x) \varphi_i \\
+            \lambda_i \varphi_i \cdot \frac{\mathrm{d}}{\mathrm{d} x} \left[E(x) A(x) \frac{\mathrm{d} \varphi_j}{\mathrm{d} x}\right] &= \lambda_i \varphi_i \cdot \lambda_j \rho(x) A(x) \varphi_j
+        \end{aligned}
+        $$
+
+        已知振型 $\varphi_i, \varphi_j$ 和频率 $\lambda_i, \lambda_j$，通过上式可以确定 $E(x) A(x)$.
+
+    > 更详细的内容，见 王大钧等编著《结构力学中的定性理论》，北京大学出版社，2014 年.

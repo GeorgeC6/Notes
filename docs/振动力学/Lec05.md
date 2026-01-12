@@ -5,29 +5,29 @@
 $$
 \left \{
 \begin{aligned}
-    & \mathbf{M} \ddot{\boldsymbol{x}} + \mathbf{C} \dot{\boldsymbol{x}} + \mathbf{K} \boldsymbol{x} = \mathbf{F}(t) \\
+    & \boldsymbol{M} \ddot{\boldsymbol{x}} + \boldsymbol{C} \dot{\boldsymbol{x}} + \boldsymbol{K} \boldsymbol{x} = \boldsymbol{F}(t) \\
     & \boldsymbol{x}(0) = \boldsymbol{\varphi}_0, \quad \dot{\boldsymbol{x}}(0) = \boldsymbol{\psi}_0
 \end{aligned}
 \right.
 $$
 
-考虑保守系统：$\mathbf{M} \ddot{\boldsymbol{x}} + \mathbf{K} \boldsymbol{x} = \boldsymbol{0}$，质量矩阵和刚度矩阵均为 $n$ 阶对称矩阵。
+考虑保守系统：$\boldsymbol{M} \ddot{\boldsymbol{x}} + \boldsymbol{K} \boldsymbol{x} = \boldsymbol{0}$，质量矩阵和刚度矩阵均为 $n$ 阶对称矩阵。
 
 设 $\boldsymbol{x} = \boldsymbol{\varphi} \sin (\omega t + \theta)$，代入得
 
 $$
 \begin{equation} \tag{1} \label{eq:osc-eigen-general}
-    (-\omega^2 \mathbf{M} + \mathbf{K}) \boldsymbol{\varphi} = \boldsymbol{0}
+    (-\omega^2 \boldsymbol{M} + \boldsymbol{K}) \boldsymbol{\varphi} = \boldsymbol{0}
 \end{equation}
 $$
 
 这是广义本征方程。记 $\lambda = \omega^2$. 要求非平凡解，需满足
 
 $$
-\det(-\lambda \mathbf{M} + \mathbf{K}) = 0
+\det(-\lambda \boldsymbol{M} + \boldsymbol{K}) = 0
 $$
 
-由于一般情况下，$\mathbf{M}$ 为对称正定矩阵，$\mathbf{K}$ 为对称半正定矩阵，上式有 $n$ 个实非负根 $\lambda_1 \leq \lambda_2 \leq \cdots \leq \lambda_n$，对应 $n$ 个特征频率 $\omega_i = \sqrt{\lambda_i}$ 和 $n$ 个线性无关的特征向量 $\boldsymbol{\varphi}_i$. 固有频率 $\omega_i$ 对应的本征向量 $\boldsymbol{\varphi}_i$ 称作第 $i$ 阶**固有振型**，也称**模态向量**. 两者合在一起称为**固有模态**. 把 $\omega_i, \boldsymbol{\varphi}_i$ 代入所设的解：
+由于一般情况下，$\boldsymbol{M}$ 为对称正定矩阵，$\boldsymbol{K}$ 为对称半正定矩阵，上式有 $n$ 个实非负根 $\lambda_1 \leq \lambda_2 \leq \cdots \leq \lambda_n$，对应 $n$ 个特征频率 $\omega_i = \sqrt{\lambda_i}$ 和 $n$ 个线性无关的特征向量 $\boldsymbol{\varphi}_i$. 固有频率 $\omega_i$ 对应的本征向量 $\boldsymbol{\varphi}_i$ 称作第 $i$ 阶**固有振型**，也称**模态向量**. 两者合在一起称为**固有模态**. 把 $\omega_i, \boldsymbol{\varphi}_i$ 代入所设的解：
 
 $$
 \boldsymbol{x}_i(t) = \boldsymbol{\varphi}_i \sin (\omega_i t + \theta_i)
@@ -46,14 +46,14 @@ $a_i, \theta_i, A_i, B_i$ 由初始条件确定。
 将固有模态 $(\omega_i, \boldsymbol{\varphi}_i)$ 代入广义本征式 \eqref{eq:osc-eigen-general}，得
 
 $$
-\mathbf{K} \boldsymbol{\varphi}_i = \omega_i^2 \mathbf{M} \boldsymbol{\varphi}_i
+\boldsymbol{K} \boldsymbol{\varphi}_i = \omega_i^2 \boldsymbol{M} \boldsymbol{\varphi}_i
 $$
 
 等号两边同乘 $\boldsymbol{\varphi}_j^{\mathrm{T}}$，得
 
 $$
 \begin{equation} \tag{2} \label{eq:mode-orthogonal-proof-1}
-    \boldsymbol{\varphi}_j^{\mathrm{T}} \mathbf{K} \boldsymbol{\varphi}_i = \omega_i^2 \boldsymbol{\varphi}_j^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_i
+    \boldsymbol{\varphi}_j^{\mathrm{T}} \boldsymbol{K} \boldsymbol{\varphi}_i = \omega_i^2 \boldsymbol{\varphi}_j^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_i
 \end{equation}
 $$
 
@@ -61,23 +61,23 @@ $$
 
 $$
 \begin{equation} \tag{3} \label{eq:mode-orthogonal-proof-2}
-    \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{K} \boldsymbol{\varphi}_j = \omega_j^2 \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_j
+    \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{K} \boldsymbol{\varphi}_j = \omega_j^2 \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_j
 \end{equation}
 $$
 
-对式 \eqref{eq:mode-orthogonal-proof-1} 取转置，利用 $\mathbf{K}, \mathbf{M}$ 的对称性，有
+对式 \eqref{eq:mode-orthogonal-proof-1} 取转置，利用 $\boldsymbol{K}, \boldsymbol{M}$ 的对称性，有
 
 $$
 \begin{equation} \tag{4} \label{eq:mode-orthogonal-proof-3}
-    \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{K} \boldsymbol{\varphi}_j = \omega_i^2 \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_j
+    \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{K} \boldsymbol{\varphi}_j = \omega_i^2 \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_j
 \end{equation}
 $$
 
-\eqref{eq:mode-orthogonal-proof-3} $-$ \eqref{eq:mode-orthogonal-proof-2} 得
+\eqref{eq:mode-orthogonal-proof-3}$-$\eqref{eq:mode-orthogonal-proof-2} 得
 
 $$
 \begin{equation} \tag{5} \label{eq:mode-orthogonal-proof-4}
-    (\omega_i^2 - \omega_j^2) \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_j = 0
+    (\omega_i^2 - \omega_j^2) \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_j = 0
 \end{equation}
 $$
 
@@ -85,7 +85,7 @@ $$
 
 $$
 \begin{equation} \tag{6} \label{eq:mode-orthogonality}
-    \boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_j = 0
+    \boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_j = 0
 \end{equation}
 $$
 
@@ -95,16 +95,17 @@ $$
 
 !!! note "归一化方式"
     $\boldsymbol{\varphi}_i^{\mathrm{T}} = [\alpha_{i1}, \alpha_{i2}, \ldots, \alpha_{in}]$
+    
     1. $\displaystyle \sum_{k=1}^n \alpha_{ik}^2 = 1$
     2. $\max{|\alpha_{ik}|^2} = 1$
-    3. $\boldsymbol{\varphi}_i^{\mathrm{T}} \mathbf{M} \boldsymbol{\varphi}_i = \bar{M}_i = 1 \implies \bar{K}_i = \omega_i^2$
+    3. $\boldsymbol{\varphi}_i^{\mathrm{T}} \boldsymbol{M} \boldsymbol{\varphi}_i = \bar{M}_i = 1 \implies \bar{K}_i = \omega_i^2$
 
 
 
 
 ### 零频
 
-若系统有特征值为 0，则重根数量对应独立刚性体运动方式数目。此时，$\mathbf{K}$ 为半正定矩阵。
+若系统有特征值为 0，则重根数量对应独立刚性体运动方式数目。此时，$\boldsymbol{K}$ 为半正定矩阵。
 
 
 !!! info "实际工程中的模态分析"

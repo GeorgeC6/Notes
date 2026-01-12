@@ -15,7 +15,7 @@ Classification of singular points of an ODE (i.e. singular points of coefficient
 ODE on a complex plane
 
 $$
-y = y(z), \quad z \in \mathbb{C}$$
+y = y(z), \quad z \in \mathbb{C}
 $$
 
 is a sol. to equation \eqref{eq:linear_homogeneous_ode}

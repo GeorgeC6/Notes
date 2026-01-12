@@ -88,8 +88,8 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        \tilde{A} &= \frac{F_0 / m}{\omega_0^2 - \omega^2 + 2 \mathrm{i} \xi \omega_0 \omega} && := H(\omega) \frac{F_0}{m} \\
-        \xrightarrow{\frac{F_0}{m} = \frac{F_0}{k} \omega_0^2} &= \frac{1}{1 - \eta^2 + 2 \mathrm{i} \xi \eta} \frac{F_0}{k} && := \beta(\eta) e^{- \mathrm{i} \varphi_0(\eta)} \frac{F_0}{k}, \quad \eta = \frac{\omega}{\omega_0}
+        \tilde{A} &= \frac{F_0 / m}{\omega_0^2 - \omega^2 + 2 \mathrm{i} \xi \omega_0 \omega} := H(\omega) \frac{F_0}{m} \\
+        \xrightarrow{\frac{F_0}{m} = \frac{F_0}{k} \omega_0^2} &= \frac{1}{1 - \eta^2 + 2 \mathrm{i} \xi \eta} \frac{F_0}{k} := \beta(\eta) e^{- \mathrm{i} \varphi_0(\eta)} \frac{F_0}{k}, \quad \eta = \frac{\omega}{\omega_0}
     \end{aligned}
 \end{equation}
 $$

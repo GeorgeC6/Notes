@@ -3,7 +3,7 @@
 ## 邓克利法
 
 $$
-\boldsymbol{M} \ddot{\boldsymbol{x}} + \boldsymbol{K} \boldsymbol{x} = \boldsymbol{0} \implies \underset{结构矩阵 \, \boldsymbol{D}}{\underbrace{(\boldsymbol{K}^{-1} \boldsymbol{M})}} \ddot{\boldsymbol{x}} + \boldsymbol{x} = \boldsymbol{0}
+\boldsymbol{M} \ddot{\boldsymbol{x}} + \boldsymbol{K} \boldsymbol{x} = \boldsymbol{0} \implies \underset{动力矩阵 \, \boldsymbol{D}}{\underbrace{(\boldsymbol{K}^{-1} \boldsymbol{M})}} \ddot{\boldsymbol{x}} + \boldsymbol{x} = \boldsymbol{0}
 $$
 
 代入 $x = A \sin(\omega t + \theta)$，
@@ -46,7 +46,7 @@ $$
 $$
 
 !!! tip "$\boldsymbol{D}_{ii}$ 的物理意义"
-    由结构矩阵 $\boldsymbol{D}$ 的定义，$D_{ii} = F_{ii} m_i$. 柔度 $F_{ii}$ 表示单位力作用在 $m_i$ 上第 $i$ 个坐标的位移。下面的例子可以看出，$\boldsymbol{D}_{ii}$ 相当于系统“抹掉”除了第 $i$ 个自由度以外的所有自由度后，第 $i$ 个自由度的固有频率的倒数平方。
+    由动力矩阵 $\boldsymbol{D}$ 的定义，$D_{ii} = F_{ii} m_i$. 柔度 $F_{ii}$ 表示单位力作用在 $m_i$ 上第 $i$ 个坐标的位移。下面的例子可以看出，$\boldsymbol{D}_{ii}$ 相当于系统“抹掉”除了第 $i$ 个自由度以外的所有自由度后，第 $i$ 个自由度的固有频率的倒数平方。
 
     参考例 4.2.3 的图，
 
@@ -146,10 +146,22 @@ $$
 
 对角元占优，$\frac{k_{ii}}{m_{ii}}$ 作为初始近似频率 $\tilde{\omega}_i^2$. 再对频率排序，取前 $p$ 个，初始振型向量除了第 $i$ 个分量为 1 外，其余均为 0.
 
-$\boldsymbol{K}$ 为半正定矩阵时，$\boldsymbol{K}^{-1}$ 不存在，采用修正刚度矩阵 $\boldsymbol{K} + \beta \boldsymbol{M}$，其中 $\beta > 0$.
+!!! tip "移位算法"
+    $\boldsymbol{K}$ 为半正定矩阵时，$\boldsymbol{K}^{-1}$ 不存在，采用修正刚度矩阵 $\boldsymbol{K} + \beta \boldsymbol{M}$，其中 $\beta > 0$.
+
+    $$
+    \bar{\boldsymbol{K}} \boldsymbol{X} = \tilde{\lambda} \boldsymbol{M} \boldsymbol{X}
+    $$
+
+    则 $\tilde{\lambda} = \lambda + \beta$
+
+## 假设模态法
+
+很多时候精确的振型求不出来，采用满足边界条件的假设振型函数 $Y_i(x)$ 近似表示实际振型 $\varphi_i(x)$. 一般情况下模态叠加收敛较快，取前 $n$ 个假设振型即可：
 
 $$
-\bar{\boldsymbol{K}} \boldsymbol{X} = \tilde{\lambda} \boldsymbol{M} \boldsymbol{X}
+\begin{equation}
+    y(x, t) = \sum_{i=1}^n Y_i(x) q_i(t) = \boldsymbol{Y}^{\mathrm{T}}(x) \boldsymbol{q}(t)
+\end{equation}
 $$
 
-$\tilde{\lambda} = \lambda + \beta$

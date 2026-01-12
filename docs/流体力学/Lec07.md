@@ -23,7 +23,7 @@ $$
 \end{equation}
 $$
 
-1. 边界层内切向速度的法向梯度很大
+2. 边界层内切向速度的法向梯度很大
 
 若 $x \sim L, \, y \sim \delta, \, u \sim U$，可知 $\dfrac{\partial^2 u}{\partial x^2} \ll \dfrac{\partial^2 u}{\partial y^2}$. 此外，如果考虑惯性力和粘性力的量级关系：
 

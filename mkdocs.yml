@@ -3,7 +3,7 @@ site_author: George Cao
 site_url: https://note.gorco.me/
 site_description: 一名力学僧的笔记站点~
 
-copyright: Copyright &copy; 2024 - 2025 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
+copyright: Copyright &copy; 2024 - 2026 <a href="https://github.com/GeorgeC6" target="_blank" rel="noopener noreferrer">George Cao</a>
 
 theme:
   name: material
@@ -138,6 +138,7 @@ plugins:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js   # MathJax 3
+  - javascripts/snow.js
 
 extra_css:
   - stylesheets/extra.css
@@ -232,6 +233,8 @@ nav:
       - "第五章 全同粒子": "Physics/量子力学/Ch5.md"
       - "第六章 对称性与守恒律": "Physics/量子力学/Ch6.md"
       - "第七章 定态微扰理论": "Physics/量子力学/Ch7.md"
+      - "第八章 变分原理": "Physics/量子力学/Ch8.md"
+      - "第十一章 量子动力学": "Physics/量子力学/Ch11.md"
 
     - 热力学与统计物理:
       - "09-24": "Physics/热力学统计/9_24.md"
@@ -276,6 +279,9 @@ nav:
     - "第九章 柱形杆的扭转和弯曲": "弹性力学/Ch9.md"
     - "第十章 空间问题": "弹性力学/Ch10.md"
     - "第十一章 热应力": "弹性力学/Ch11.md"
+    - "第十二章 弹性波的传播": "弹性力学/Ch12.md"
+    - "第十三章 弹性薄板的弯曲": "弹性力学/Ch13.md"
+    - "第十四章 变分法": "弹性力学/Ch14.md"
 
   - 振动力学:
     - "振动力学/index.md"
@@ -286,6 +292,7 @@ nav:
     - "多自由度线性系统": "振动力学/Lec05.md"
     - "振动近似计算方法": "振动力学/Lec06.md"
     - "连续系统振动": "振动力学/Lec07.md"
+    - "线性振动系统的最优控制": "振动力学/Lec08.md"
 
   - 流体力学:
     - "流体力学/index.md"
@@ -298,6 +305,7 @@ nav:
     - "粘性层流精确解": "流体力学/Lec06.md"
     - "边界层理论基础": "流体力学/Lec07.md"
     - "湍流理论": "流体力学/Lec08.md"
+    - "管流": "流体力学/Lec09.md"
 
 
   - CS:
