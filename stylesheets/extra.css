@@ -13,12 +13,19 @@
   --md-default-bg-color: #0e1116;
 }
 
+/* 内容区域范围 */
 .md-grid {
   max-width: 90%;
 }
 
+/* 标题统一加粗 */
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
+}
+
+/* Tabs 选中项底部白色下划线 */
+.md-tabs__item--active {
+  border-bottom: 2px solid var(--md-default-fg-color);
 }
 
 .md-typeset .admonition,
@@ -120,6 +127,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-mask-image: var(--md-admonition-icon--tip);
           mask-image: var(--md-admonition-icon--tip);
 }
+
+
 
 @keyframes heart {
     0%, 40%, 80%, 100% {
