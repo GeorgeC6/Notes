@@ -1,3 +1,8 @@
+---
+hide:
+    - footer
+---
+
 # 🔗 **友情链接**
 
 <div class="grid cards" markdown>

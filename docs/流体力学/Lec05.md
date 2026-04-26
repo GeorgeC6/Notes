@@ -38,12 +38,16 @@ $$
 ## 涡线，涡面，涡管
 
 - 涡线（vortex line）：某一时刻沿曲线各流体微团的瞬时转动轴线
-    - 涡线方程
-    $$\mathbf{\Omega} \times \mathrm{d}\mathbf{r} = 0$$
-    - 等价形式
-    $$
-    \frac{\mathrm{d} x}{\Omega_x} = \frac{\mathrm{d} y}{\Omega_y} = \frac{\mathrm{d} z}{\Omega_z}
-    $$
+    -   涡线方程
+
+        $$
+        \mathbf{\Omega} \times \mathrm{d}\mathbf{r} = 0
+        $$
+    -   等价形式
+
+        $$
+        \frac{\mathrm{d} x}{\Omega_x} = \frac{\mathrm{d} y}{\Omega_y} = \frac{\mathrm{d} z}{\Omega_z}
+        $$
 - 涡面（vortex sheet）：
 
 

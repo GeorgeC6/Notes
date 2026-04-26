@@ -1,17 +1,13 @@
 # 4 数字集成电路
 
-1. 常量与变量的关系
+1.  常量与变量的关系
+2.  逻辑代数运算规则
 
-| | |
-|:---:|:---:|
-| 自等律 | $A = A$ |
-
-
-2. 逻辑代数运算规则
-
-反演律
-
-吸收律
+    | 运算律 | 形式 |
+    |:---:|:---:|
+    | 自等律 | $A = A$ |
+    | 反演律 | $\overline{\overline{A}} = A$ |
+    | 吸收律 | $A + AB = A$ |
 
 ### 4.2.1 逻辑函数的表示
 
@@ -39,7 +35,7 @@
     - $S$：和
     - $C$：进位
 
-<center>
+
 半加器逻辑状态表
 
 | $A$ | $B$ | $S$ | $C$ |
@@ -48,7 +44,7 @@
 | 0 | 1 | 1 | 0 |
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
-</center>
+
 
 逻辑表达式
 
@@ -68,7 +64,7 @@ $$
     - $S_i$：和
     - $C_i$：进位
 
-<center>
+
 全加器逻辑状态表
 
 | $A_i$ | $B_i$ | $C_{i-1}$ | $S_i$ | $C_i$ |
@@ -81,14 +77,13 @@ $$
 | 1 | 0 | 1 | 0 | 1 |
 | 1 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 1 | 1 |
-</center>
 
 逻辑表达式
 
 $$
 \begin{aligned}
-S_i &= \overline{A_i} \overline{B_i} C_{i-1} + \overline{A_i} B_i \overline{C_{i-1}} + A_i \overline{B_i} \overline{C_{i-1}} + A_i B_i C_{i-1} \\
-C_i &= A_i B_i + A_i C_{i-1} + B_i C_{i-1}
+    S_i &= \overline{A_i} \overline{B_i} C_{i-1} + \overline{A_i} B_i \overline{C_{i-1}} + A_i \overline{B_i} \overline{C_{i-1}} + A_i B_i C_{i-1} \\
+    C_i &= A_i B_i + A_i C_{i-1} + B_i C_{i-1}
 \end{aligned}
 $$
 

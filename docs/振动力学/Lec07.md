@@ -202,7 +202,7 @@ $$
 
     $$
     \left \{
-    \begin{align}
+    \begin{aligned}
         &\int_0^l \rho(x) A(x) \varphi_i(x) \varphi_j(x) \, \mathrm{d} x = \begin{cases}
             0 , & i \neq j \\[1ex]
             M_i , & i = j
@@ -212,7 +212,7 @@ $$
             K_i , & i = j
         \end{cases} \\
         & K_i = \omega_i^2 M_i
-    \end{align}
+    \end{aligned}
     \right.
     $$
 

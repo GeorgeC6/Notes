@@ -24,8 +24,8 @@ theme:
     - navigation.indexes  # 点击小节名字自动显示 index 界面
     - navigation.footer # 底部导航栏
     - navigation.prune
-    # - navigation.instant # 站内瞬移，但会导致公式跳转后不渲染
-    # - navigation.instant.progress
+    - navigation.instant # 站内瞬移
+    - navigation.instant.progress
     # - toc.integrate   # 文档 toc 集成到总目录中
     - toc.follow  # 右侧目录跟随滚动
     - search.highlight
@@ -137,8 +137,10 @@ plugins:
       auto_caption: true
 
 extra_javascript:
+  - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js   # MathJax 3
-  - javascripts/snow.js
+  # - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js   # MathJax 4
+  # - javascripts/snow.js
 
 extra_css:
   - stylesheets/extra.css
@@ -148,6 +150,7 @@ nav:
   - 主页:
     - "index.md"
     - 友链: "Links.md"
+    - 许可: "License.md"
 
   - 数学:
     - 微积分 I:
@@ -207,11 +210,6 @@ nav:
       - "复杂系统中的计算方法": "Physics/计算物理/Week 6/Lec08.md"
       - "深度学习和计算物理": "Physics/计算物理/Week 8/Lec09.md"
 
-    - 电动力学:
-      - "Physics/电动力学/index.md"
-      - "02-27": "Physics/电动力学/02-27.md"
-      - "03-20": "Physics/电动力学/03-20.md"
-    
     - 凝聚态物理专题:
       - "Physics/凝聚态物理专题/index.md"
       - "概述": "Physics/凝聚态物理专题/概述.md"
@@ -235,11 +233,69 @@ nav:
       - "第七章 定态微扰理论": "Physics/量子力学/Ch7.md"
       - "第八章 变分原理": "Physics/量子力学/Ch8.md"
       - "第十一章 量子动力学": "Physics/量子力学/Ch11.md"
+      - "补充内容": "Physics/量子力学/Misc.md"
+
+    - 电动力学:
+      - "Physics/电动力学/index.md"
+      - "绪论": "Physics/电动力学/Lec01.md"
+      - "静电场的宏观性质": "Physics/电动力学/Lec02.md"
+      - "微分形式（Pt.I）": "Physics/电动力学/Lec03.md"
+      - "微分形式（Pt.II）": "Physics/电动力学/Lec04.md"
+      - "张量基础": "Physics/电动力学/Lec05.md"
+      - "静电场的能量、模式分解": "Physics/电动力学/Lec06.md"
+      - "正交曲线坐标系，静电场球坐标系模式分解": "Physics/电动力学/Lec07.md"
+      - "静电场多极展开": "Physics/电动力学/Lec08.md"
+      - "理想点源在外电场中的能量与受力，格林函数": "Physics/电动力学/Lec09.md"
+      - "静电场中的边界问题，镜像法": "Physics/电动力学/Lec10.md"
+      - "有限区域里的格林函数": "Physics/电动力学/Lec11.md"
+      - "静磁场的基本规律": "Physics/电动力学/Lec12.md"
+      - "静磁场与静电场的比较": "Physics/电动力学/Lec13.md"
+      - "静磁场多极展开": "Physics/电动力学/Lec14.md"
+      - "场的统一描述：微分形式": "Physics/电动力学/Lec15.md"
+      - "场的统一描述：张量": "Physics/电动力学/Lec16.md"
+
+    - 固体物理:
+      - "Physics/固体物理/index.md"
+      - "Drude 自由电子气模型": "Physics/固体物理/Lec01.md"
+      - "Sommerfeld 模型": "Physics/固体物理/Lec02.md"
+      - "晶格和基元": "Physics/固体物理/Lec03.md"
+      - "晶体结构、晶向和晶面": "Physics/固体物理/Lec04.md"
+      - "倒格子": "Physics/固体物理/Lec05.md"
+      - "晶体结构的 X 射线衍射": "Physics/固体物理/Lec06.md"
+      - "固体中的原子结合": "Physics/固体物理/Lec07.md"
+      - "晶格振动的力学描述": "Physics/固体物理/Lec08.md"
+      - "简正振动、声子": "Physics/固体物理/Lec09.md"
+      - "晶体的热学性质": "Physics/固体物理/Lec10.md"
+
+    - 凝聚态现代测量方法:
+      - "Physics/凝聚态现代测量方法/index.md"
+      - "绪论": "Physics/凝聚态现代测量方法/Lec01.md"
+      - "SPM": "Physics/凝聚态现代测量方法/Lec02.md"
+      - "真空技术": "Physics/凝聚态现代测量方法/Lec03.md"
+      - "样品的清洁": "Physics/凝聚态现代测量方法/Lec04.md"
+      - "电子能量以及强度检测": "Physics/凝聚态现代测量方法/Lec05.md"
+      - "功函数测量": "Physics/凝聚态现代测量方法/Lec06.md"
+      - "XPS": "Physics/凝聚态现代测量方法/Lec07.md"
+      - "UPS": "Physics/凝聚态现代测量方法/Lec08.md"
+      - "SEM, AES, PEEM": "Physics/凝聚态现代测量方法/Lec09.md"
+      - "同步辐射": "Physics/凝聚态现代测量方法/Lec10.md"
+      - "EELS, IRS": "Physics/凝聚态现代测量方法/Lec11.md"
+      - "LEED, RHEED": "Physics/凝聚态现代测量方法/Lec12.md"
+      - "纳米科学与技术": "Physics/凝聚态现代测量方法/Lec13.md"
+
+    - 广义相对论:
+      - "Physics/广义相对论/index.md"
+      - "数学基础（Pt. I）": "Physics/广义相对论/Lec02.md"
+      - "数学基础（Pt. III）": "Physics/广义相对论/Lec04.md"
+      - "李导数，等效原理，能动张量": "Physics/广义相对论/Lec07.md"
+      - "爱因斯坦场方程": "Physics/广义相对论/Lec08.md"
+
 
     - 热力学与统计物理:
       - "09-24": "Physics/热力学统计/9_24.md"
       - "10-15": "Physics/热力学统计/10_15.md"
-  
+
+
   - 数理方法:
     - "MathPhy/index.md"
     - "正交曲线系": "MathPhy/Curvilinear Coordinates.md"
@@ -378,6 +434,12 @@ nav:
       - "Lec 6.5: CUDA C Lab": "CS/HPC101/Lec05/CUDA_C_Lab.md"
       - "Lec 7: OpenMP/MPI": "CS/HPC101/Lec06/OpenMP.md"
       - "Lec 8: C++ 并行编程": "CS/HPC101/Lec07/C++_Concurrency.md"
+    
+    - Godot:
+      - "CS/Godot/index.md"
+      - 基础入门: "CS/Godot/Basics.md"
+      - 第一个游戏: "CS/Godot/FirstGame.md"
+      - 音频系统: "CS/Godot/SoundSys.md"
 
   - 音乐:
     - "Music/index.md"
@@ -448,3 +510,44 @@ nav:
     - 连续介质力学:
       - "Others/连续介质力学/index.md"
       - "张量": "Others/连续介质力学/Tensor.md"
+    - 有限元方法:
+      - "Others/FEM/index.md"
+      - "Lec 1: Introduction": "Others/FEM/Lec01.md"
+      - "Lec 2: Preknowledge": "Others/FEM/Lec02.md"
+      - "Lec 3: Stiffness Method": "Others/FEM/Lec03.md"
+      - "Lec 4: Bar/Truss": "Others/FEM/Lec04.md"
+      - "Lec 5: Beam": "Others/FEM/Lec05.md"
+      - "Lec 6: ABAQUS 入门": "Others/FEM/Lec06.md"
+      - "Lec 7: 2D Problems": "Others/FEM/Lec07.md"
+    - 计算流体力学:
+      - "Others/CFD/index.md"
+      - "Chapter 1: Philosophy of CFD": "Others/CFD/Lec01.md"
+      - "Chapter 2: Governing Equations": "Others/CFD/Lec02.md"
+      - "Chapter 4: Basic Aspects of Discretization": "Others/CFD/Lec04.md"
+      - "Chapter 5: Grids with Appropriate Transformation": "Others/CFD/Lec05.md"
+      - "Chapter 6: Techniques for CFD": "Others/CFD/Lec06.md"
+      - "Chapter 7: Quasi-One-Dimensional Nozzle Flow": "Others/CFD/Ch07.md"
+      - "Chapter 10: Supersonic Flow Over A Flat Plate": "Others/CFD/Ch10.md"
+    - 生物力学:
+      - "Others/生物力学/index.md"
+      - "生物力学 & 生物物理绪论": "Others/生物力学/Lec01.md"
+      - "经典热力学回顾": "Others/生物力学/Lec02.md"
+      - "统计物理初步": "Others/生物力学/Lec03.md"
+      - "统计力学在生物体系的简单应用": "Others/生物力学/Lec04.md"
+      - "生物系统中的时间尺度": "Others/生物力学/Lec05.md"
+    - 塑性力学:
+      - "Others/塑性力学/index.md"
+      - "绪论": "Others/塑性力学/Lec01.md"
+      - "第四章 屈服准则": "Others/塑性力学/Ch4.md"
+    - 现代固体力学实验技术:
+      - "Others/现代固体力学实验技术/index.md"
+      - "Lec 1: 绪论 & AFM": "Others/现代固体力学实验技术/Lec01.md"
+      - "Lec 2: 电子显微学": "Others/现代固体力学实验技术/Lec02.md"
+    - 信号与系统:
+      - "Others/信号与系统/index.md"
+      - "第一章 信号与系统的基本概念": "Others/信号与系统/Ch1.md"
+      - "第二章 线性时不变系统的时域分析": "Others/信号与系统/Ch2.md"
+      - "第三章 线性时不变系统的频域分析": "Others/信号与系统/Ch3.md"
+    - Innovative Design Hub:
+      - "Others/Innovative Design Hub/index.md"
+      - "Introduction": "Others/Innovative Design Hub/Lec01.md"

@@ -208,9 +208,9 @@ Rules:
 - The maximum number of nodes at level $i$ is $2^{i-1}$, $i \geq 1$.
 - The maximum number of nodes in a binary tree of depth $k$ is $2^k - 1$, $k \geq 1$.
 - For any nonempty binary tree, $n_0 = n_2 + 1$, where $n_0$ is the number of leaf nodes and $n_2$ is the number of nodes with degree 2.
-  
-  !!! note "Proof"
-      Let $n = n_0 + n_1 + n_2$ be the total number of nodes in the tree. The total number of edges $B = n - 1$.
+
+    !!! note "Proof"
+        Let $n = n_0 + n_1 + n_2$ be the total number of nodes in the tree. The total number of edges $B = n - 1$.
 
 ## Binary Search Trees
 
@@ -232,7 +232,7 @@ Rules:
 
 #### Find
 
-```c
+```c linenums="1"
 Position Find(ElementType X, SearchTree T)
 {
     if (T == NULL)
@@ -253,7 +253,7 @@ Position Find(ElementType X, SearchTree T)
 
 一路向左
 
-```c
+```c linenums="1"
 Position FindMin(SearchTree T)
 {
     if (T == NULL)
@@ -269,7 +269,7 @@ Position FindMin(SearchTree T)
 
 一路向右
 
-```c
+```c linenums="1"
 Position FindMax(SearchTree T)
 {
     if (T != NULL)
@@ -283,7 +283,7 @@ Position FindMax(SearchTree T)
 
 #### Insert
 
-```c
+```c linenums="1"
 SearchTree Insert(ElementType X, SearchTree T)
 {
     if (T == NULL)
@@ -360,7 +360,7 @@ SearchTree Insert(ElementType X, SearchTree T)
 
 静态删除：
 
-```c
+```c linenums="1"
 SearchTree Delete(ElementType X, SearchTree T)
 {
     Position TmpCell;

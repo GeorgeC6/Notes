@@ -158,7 +158,7 @@ $$
 \frac{\mathrm{d}^2 u}{\mathrm{d} r^2} + k^2 u = 0 \implies u(r) = A \sin kr + B \cos kr
 $$
 
-$r \to 0 $ 时，$[\cos(kr)]/r \to \infty$，不符合物理意义，故 $B = 0$. 边界条件要求 $\sin (ka) = 0$，即 $ka = N \pi, \, N = 1, 2, 3, \ldots$ 故能量允许值为
+$r \to 0$ 时，$[\cos(kr)]/r \to \infty$，不符合物理意义，故 $B = 0$. 边界条件要求 $\sin (ka) = 0$，即 $ka = N \pi, \, N = 1, 2, 3, \ldots$ 故能量允许值为
 
 $$
 E_{N0} = \frac{N^2 \pi^2 \hbar^2}{2m a^2}, \quad N = 1, 2, 3, \ldots
