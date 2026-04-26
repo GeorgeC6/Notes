@@ -9,9 +9,9 @@ window.MathJax = {
     ignoreHtmlClass: ".*|",
     processHtmlClass: "arithmatex"
   },
-  output: {
-    font: 'mathjax-stix2'
-  }
+  // output: {
+  //   font: 'mathjax-stix2'
+  // }
 };
 
 // Instant Loading
