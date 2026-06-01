@@ -91,6 +91,8 @@ $$
 \begin{aligned}
     X(t) &= \int_{-\infty}^\infty x(\omega) \mathrm{e}^{-j \omega t} \, \mathrm{d} \omega \\
     \implies \mathcal{F}[X(t)] &= \int_{-\infty}^\infty X(t) \mathrm{e}^{-j \omega t} \, \mathrm{d} t = \int_{-\infty}^\infty \left( \int_{-\infty}^\infty x(\omega') \mathrm{e}^{-j \omega' t} \, \mathrm{d} \omega' \right) \mathrm{e}^{-j \omega t} \, \mathrm{d} t \\
+    &= \int_{-\infty}^\infty x(\omega') \left( \int_{-\infty}^\infty \mathrm{e}^{-j (\omega + \omega') t} \, \mathrm{d} t \right) \mathrm{d} \omega' = \int_{-\infty}^\infty x(\omega') 2\pi \delta(\omega + \omega') \, \mathrm{d} \omega' \\
+    &= 2\pi x(-\omega)
 \end{aligned}
 $$
 

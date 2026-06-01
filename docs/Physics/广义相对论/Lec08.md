@@ -218,7 +218,7 @@ $$
     且
 
     $$
-    -(X^0)^2 + \underset{= \underset{r^2}{\underbrace{\sum_{I = 1}^3 (X^I)^2}} + (X^4)^2}{\underbrace{\sum_{I = 1}^4 (X^I)^2}} = R^2 \iff R^2 - r^2 = -(X^0)^2 + (X^4)^2
+    -(X^0)^2 + \underset{= \underset{r^2}{\underbrace{\sum_{I = 1}^3 (X^I)^2}} + (X^4)^2}{\underbrace{\quad \sum_{I = 1}^4 (X^I)^2 \quad}} = R^2 \iff R^2 - r^2 = -(X^0)^2 + (X^4)^2
     $$
 
     做代换
@@ -365,4 +365,29 @@ $$
     d s^2 &= \frac{R^2}{\cos^2 \eta} \left( - d \eta^2 + d \Omega_3^2 \right), \quad - \frac{\pi}{2} < \eta < \frac{\pi}{2} \\
     &= d \chi^2 + \sin^2 \chi \, d \Omega_2^2, \quad 0 \leq \chi \leq \pi
 \end{aligned}
+$$
+
+de Sitter 空间的彭罗斯图没有类光。宇宙有两个阶段是 de Sitter 阶段：
+
+- 早期宇宙的暴涨阶段
+- 未来宇宙的加速膨胀阶段
+
+#### Anti-de Sitter 空间的 Penrose Diagram
+
+AdS$_4$ 空间的线元：
+
+$$
+d s^2 = - \cosh^2 \rho \, d t^2 + R^2 d \rho^2 + R^2 \sinh^2 \rho \, d \Omega_2^2, \quad \rho \in [0, +\infty)
+$$
+
+做变换
+
+$$
+\rho \to \psi: \quad \cos \psi = \frac{1}{\cosh \rho}, \, \psi \in [0, \frac{\pi}{2}); \quad \tilde{t} = \frac{t}{R} \in (-\infty, \infty)
+$$
+
+线元变为
+
+$$
+d s^2 = \frac{R^2}{\cos^2 \psi} \left( - d \tilde{t}^2 + \underset{d \Omega_3^2}{\underbrace{d \psi^2 + \sin^2 \psi \, d \Omega_2^2}} \right)
 $$

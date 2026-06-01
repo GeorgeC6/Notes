@@ -253,6 +253,14 @@ nav:
       - "静磁场多极展开": "Physics/电动力学/Lec14.md"
       - "场的统一描述：微分形式": "Physics/电动力学/Lec15.md"
       - "场的统一描述：张量": "Physics/电动力学/Lec16.md"
+      - "一般参数化下静电/静磁规律的张量表述": "Physics/电动力学/Lec17.md"
+      - "电磁场的基本规律": "Physics/电动力学/Lec18.md"
+      - "四维图像与三维图像的等价性": "Physics/电动力学/Lec19.md"
+      - "等效原理": "Physics/电动力学/Lec20.md"
+      - "洛伦兹变换": "Physics/电动力学/Lec21.md"
+      - "电磁场的能/动量及其守恒定律": "Physics/电动力学/Lec22.md"
+      - "电磁势及其运动方程": "Physics/电动力学/Lec23.md"
+      - "平面电磁波": "Physics/电动力学/Lec24.md"
 
     - 固体物理:
       - "Physics/固体物理/index.md"
@@ -266,6 +274,9 @@ nav:
       - "晶格振动的力学描述": "Physics/固体物理/Lec08.md"
       - "简正振动、声子": "Physics/固体物理/Lec09.md"
       - "晶体的热学性质": "Physics/固体物理/Lec10.md"
+      - "能带理论": "Physics/固体物理/Lec11.md"
+      - "晶体中电子在电磁场中的运动": "Physics/固体物理/Lec12.md"
+      - "金属电子论": "Physics/固体物理/Lec13.md"
 
     - 凝聚态现代测量方法:
       - "Physics/凝聚态现代测量方法/index.md"
@@ -289,6 +300,8 @@ nav:
       - "数学基础（Pt. III）": "Physics/广义相对论/Lec04.md"
       - "李导数，等效原理，能动张量": "Physics/广义相对论/Lec07.md"
       - "爱因斯坦场方程": "Physics/广义相对论/Lec08.md"
+      - "对称性与守恒律": "Physics/广义相对论/Lec09.md"
+      - "史瓦西度规，水星进动": "Physics/广义相对论/Lec10.md"
 
 
     - 热力学与统计物理:
@@ -519,6 +532,12 @@ nav:
       - "Lec 5: Beam": "Others/FEM/Lec05.md"
       - "Lec 6: ABAQUS 入门": "Others/FEM/Lec06.md"
       - "Lec 7: 2D Problems": "Others/FEM/Lec07.md"
+      - "Lec 8: Axisymmetric Elements": "Others/FEM/Lec08.md"
+      - "Lec 9: Isoparametric Formulation": "Others/FEM/Lec09.md"
+      - "Lec 10: Numerical Integration": "Others/FEM/Lec10.md"
+      - "Lec 11: Plate Element": "Others/FEM/Lec11.md"
+      - "Lec 12: Nonlinearity": "Others/FEM/Lec12.md"
+      - "Lec 13: Thermal Stress": "Others/FEM/Lec13.md"
     - 计算流体力学:
       - "Others/CFD/index.md"
       - "Chapter 1: Philosophy of CFD": "Others/CFD/Lec01.md"
@@ -535,6 +554,8 @@ nav:
       - "统计物理初步": "Others/生物力学/Lec03.md"
       - "统计力学在生物体系的简单应用": "Others/生物力学/Lec04.md"
       - "生物系统中的时间尺度": "Others/生物力学/Lec05.md"
+      - "随机游走与扩散": "Others/生物力学/Lec06.md"
+      - "盐溶液的静电学": "Others/生物力学/Lec07.md"
     - 塑性力学:
       - "Others/塑性力学/index.md"
       - "绪论": "Others/塑性力学/Lec01.md"
@@ -548,6 +569,15 @@ nav:
       - "第一章 信号与系统的基本概念": "Others/信号与系统/Ch1.md"
       - "第二章 线性时不变系统的时域分析": "Others/信号与系统/Ch2.md"
       - "第三章 线性时不变系统的频域分析": "Others/信号与系统/Ch3.md"
+      - "第四章 离散时间信号的频域分析": "Others/信号与系统/Ch4.md"
+      - "第五章 采样定理": "Others/信号与系统/Ch5.md"
+      - "第六章 Laplace 变换": "Others/信号与系统/Ch6.md"
     - Innovative Design Hub:
       - "Others/Innovative Design Hub/index.md"
       - "Introduction": "Others/Innovative Design Hub/Lec01.md"
+    - 断裂力学基础:
+      - "Others/断裂力学基础/index.md"
+      - "绪论": "Others/断裂力学基础/Lec00.md"
+      - "Griffith 理论": "Others/断裂力学基础/Lec01.md"
+      - "断裂模式与尖端裂纹场": "Others/断裂力学基础/Lec02.md"
+      - "断裂力学中的能量概念": "Others/断裂力学基础/Lec03.md"

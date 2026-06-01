@@ -23,11 +23,11 @@
     >
     > ![宇称变换下的主动观点与被动观点](image.png)
 
-对于质点，宇称变换下 $\vec{x} \overset{\mathcal{P}}{\longrightarrow} -\vec{x} \equiv \vec{x}'$，而我们现在关心{++场的值在宇称变换会有什么变化++}。
+对于质点，宇称变换下 $\vec{x} \overset{\mathcal{P}}{\longrightarrow} -\vec{x} \equiv \vec{x}'$，而我们现在关心{++场的值在宇称变换下会有什么变化++}。
 
 $$
 \begin{aligned}
-    & \text{标量（场）} && f(\vec{x}) \overset{\mathcal{P}}{\longrightarrow} f'(\vec{x}') \xlongequal{场的值} f(\vec{x}) = f(-\vec{x}') &&& \rho(\vec{x}) \\
+    & \text{标量（场）} && f(\vec{x}) \overset{\mathcal{P}}{\longrightarrow} f'(\vec{x}') \xlongequal{场的值} f(\vec{x}) \textcolor{gray}{= f(-\vec{x}')} &&& \rho(\vec{x}) \\
     & \text{赝标量} && \tilde{f}(\vec{x}) \overset{\mathcal{P}}{\longrightarrow} \tilde{f}'(\vec{x}') = - \tilde{f}(\vec{x}) &&& \vec{A} \cdot (\vec{B} \times \vec{C}) \\
     & \text{矢量} && \vec{v}(\vec{x}) \overset{\mathcal{P}}{\longrightarrow} \vec{v}'(\vec{x}') = - \vec{v}(\vec{x}) &&& \vec{J}(\vec{x}), \vec{E} \\
     & \text{赝矢量} && \vec{w}(\vec{x}) \overset{\mathcal{P}}{\longrightarrow} \vec{w}'(\vec{x}') = \vec{w}(\vec{x}) &&& \vec{B}
