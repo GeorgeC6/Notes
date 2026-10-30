@@ -64,7 +64,7 @@ $$
 $\phi$ 向方程：
 
 $$
-\begin{equation} \label{eq:phi-equation}
+\begin{equation} \label{eq:phi-equation} \tag{4.1.5}
     \frac{\mathrm{d}^2 \Phi}{\mathrm{d} \phi^2} + m^2 \Phi = 0 \implies \Phi(\phi) = e^{\mathrm{i} m \phi}
 \end{equation}
 $$
@@ -72,7 +72,7 @@ $$
 $\theta$ 向方程：
 
 $$
-\begin{equation} \label{eq:theta-equation}
+\begin{equation} \label{eq:theta-equation} \tag{4.1.6}
     \sin \theta \frac{\mathrm{d}}{\mathrm{d} \theta} \left( \sin \theta \frac{\mathrm{d} \Theta}{\mathrm{d} \theta} \right) + \left[ \ell(\ell+1) \sin^2 \theta - m^2 \right] \Theta = 0
 \end{equation}
 $$
@@ -80,7 +80,7 @@ $$
 它的解是**缔和勒让德函数（associated Legendre function）** $\mathrm{P}_\ell^m(\cos \theta)$，其定义为
 
 $$
-\begin{equation} \label{eq:associated-legendre}
+\begin{equation} \label{eq:associated-legendre} \tag{4.1.7}
     \mathrm{P}_{\ell}^m(x) = (-1)^m (1 - x^2)^{m/2} \frac{\mathrm{d}^m}{\mathrm{d} x^m} \mathrm{P}_\ell(x)
 \end{equation}
 $$
@@ -88,7 +88,7 @@ $$
 其中 $\mathrm{P}_\ell(x)$ 是 $\ell$ 阶**勒让德多项式（Legendre polynomial）**，由**罗德里格斯公式（Rodrigues' formula）**定义为
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:legendre-polynomial} \tag{4.1.8}
     \mathrm{P}_{\ell}(x) = \frac{1}{2^\ell \ell!} \frac{\mathrm{d}^\ell}{\mathrm{d} x^\ell} (x^2 - 1)^\ell
 \end{equation}
 $$
@@ -100,7 +100,7 @@ $$
 组合 $\theta$ 和 $\phi$ 的解，得到（归一化的）**球谐函数（spherical harmonics）**：
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:spherical-harmonics} \tag{4.1.9}
     \mathrm{Y}_{\ell}^m(\theta, \phi) = \sqrt{\frac{2\ell + 1}{4\pi} \frac{(\ell - m)!}{(\ell + m)!}} \, \mathrm{P}_\ell^m(\cos \theta) e^{\mathrm{i} m \phi}
 \end{equation}
 $$
@@ -120,7 +120,7 @@ $$
 原式 \eqref{eq:radial} 化为
 
 $$
-\begin{equation} \label{eq:radial-u}
+\begin{equation} \label{eq:radial-u} \tag{4.1.10}
     - \frac{\hbar^2}{2m} \frac{\mathrm{d}^2 u}{\mathrm{d} r^2} + \left[ V(r) + \frac{\hbar^2}{2m} \frac{\ell(\ell+1)}{r^2} \right] u = E u
 \end{equation}
 $$
@@ -147,7 +147,7 @@ $$
 势阱内，径向方程 \eqref{eq:radial-u} 为
 
 $$
-\begin{equation} \label{eq:no-potential-radial}
+\begin{equation} \label{eq:no-potential-radial} \tag{4.1.11}
     \frac{\mathrm{d}^2 u}{\mathrm{d} r^2} + \left( k^2 - \frac{\ell(\ell+1)}{r^2} \right) u = 0, \quad k \equiv \sqrt{\frac{2mE}{\hbar^2}}
 \end{equation}
 $$
@@ -193,7 +193,7 @@ $$
 代入径向方程 \eqref{eq:radial-u}，得
 
 $$
-\begin{equation} \label{eq:hydrogen-radial}
+\begin{equation} \label{eq:hydrogen-radial} \tag{4.2.1}
     -\frac{\hbar^2}{2m_{\text{e}}} \frac{\mathrm{d}^2 u}{\mathrm{d} r^2} + \left[ -\frac{e^2}{4 \pi \varepsilon_0} \frac{1}{r} + \frac{\hbar^2}{2m_{\text{e}}} \frac{\ell(\ell+1)}{r^2} \right] u = E u
 \end{equation}
 $$
@@ -207,7 +207,7 @@ $$
 式 \eqref{eq:hydrogen-radial} 化为
 
 $$
-\begin{equation} \label{eq:hydrogen-radial-rho}
+\begin{equation} \label{eq:hydrogen-radial-rho} \tag{4.2.2}
     \frac{\mathrm{d}^2 u}{\mathrm{d} \rho^2} = \left[ 1 - \frac{\rho_0}{\rho} + \frac{\ell(\ell+1)}{\rho^2} \right] u
 \end{equation}
 $$
@@ -254,7 +254,7 @@ $$
 回代，径向方程 \eqref{eq:hydrogen-radial-rho} 变为
 
 $$
-\begin{equation} \label{eq:radical-v}
+\begin{equation} \label{eq:radical-v} \tag{4.2.3}
     \rho \frac{\mathrm{d}^2 v}{\mathrm{d} \rho^2} + 2(\ell + 1 - \rho) \frac{\mathrm{d} v}{\mathrm{d} \rho} + [\rho_0 - 2(\ell + 1)] v = 0
 \end{equation}
 $$
@@ -301,14 +301,14 @@ $$
 
 !!! tip "$\boldsymbol{r}$ 与 $\boldsymbol{p}$ 各分量之间的对易关系"
     $$
-    \begin{equation} \label{eq:r-p-commutation}
+    \begin{equation} \label{eq:r-p-commutation} \tag{4.3.1}
         [x_i, p_j] = \mathrm{i} \hbar \delta_{ij}, \quad [x_i, x_j] = [p_i, p_j] = 0
     \end{equation}
     $$
 
 !!! tip "对易符号 $[\cdot,\cdot]$ 的几个恒等式"
     $$
-    \begin{equation} \label{eq:commutation-id}
+    \begin{equation} \label{eq:commutation-id} \tag{4.3.2}
         [AB, C] = A [B, C] + [A, C] B
     \end{equation}
     $$
@@ -331,7 +331,7 @@ $$
 轮换得
 
 $$
-\begin{equation} \label{eq:L-commutation}
+\begin{equation} \label{eq:L-commutation} \tag{4.3.3}
     \boxed{
     \begin{aligned}
         \left[L_x, L_y \right] &= \mathrm{i} \hbar L_z \\
@@ -362,7 +362,7 @@ $$
 同理， $[L^2, L_y] = [L^2, L_z] = 0$. 简洁的形式为
 
 $$
-\begin{equation} \label{eq:L2-commutation}
+\begin{equation} \label{eq:L2-commutation} \tag{4.3.4}
     \boxed{
         [L^2, \boldsymbol{L}] = 0
     }
@@ -380,7 +380,7 @@ $$
 定义
 
 $$
-\begin{equation} \label{eq:L-ladder}
+\begin{equation} \label{eq:L-ladder} \tag{4.3.5}
     L_{\pm} \equiv L_x \pm \mathrm{i} L_y
 \end{equation}
 $$
@@ -388,7 +388,7 @@ $$
 与 $L_z$ 的对易关系为
 
 $$
-\begin{equation} \label{eq:Lz-L+-commutation}
+\begin{equation} \label{eq:Lz-L+-commutation} \tag{4.3.6}
     \begin{aligned}
         [L_z, L_{\pm}] &= [L_z, L_x] \pm \mathrm{i} [L_z, L_y] \\
         &\overset{\eqref{eq:L-commutation}}{=} \mathrm{i} \hbar L_y \pm \mathrm{i} (-\mathrm{i} \hbar L_x) = \pm \hbar (L_x \pm \mathrm{i} L_y) \\
@@ -400,7 +400,7 @@ $$
 与 $L^2$ 显然对易：
 
 $$
-\begin{equation} \label{eq:L2-L+-commutation} 
+\begin{equation} \label{eq:L2-L+-commutation} \tag{4.3.7}
     \begin{aligned}
         [L^2, L_{\pm}] &= [L^2, L_x] \pm \mathrm{i} [L^2, L_y] \\
         &\overset{\eqref{eq:L2-commutation}}{=} 0
@@ -431,7 +431,7 @@ $$
 
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:L+-eigenvalues} \tag{4.3.8}
     \begin{aligned}
         L_+ f_{\ell}^m &= \hbar \sqrt{\ell (\ell + 1) - m(m+1)} \\
         L_- f_{\ell}^m &= \hbar \sqrt{\ell (\ell + 1) - m(m-1)}

@@ -17,12 +17,21 @@ $$
 \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(\vec{r}) \right] \psi = \mathrm{i} \hbar \frac{\partial \psi}{\partial t}
 $$
 
-在 $\vec{k}_0$ 附近展开：$E(\vec{k}') = E(\vec{k}_0) + \left. \frac{\partial E}{\partial \vec{k}} \right|_{\vec{k} = \vec{k}_0} \cdot (\vec{k}' - \vec{k}_0)$
-
-叠加
+晶体中电子的 Bloch 波函数为
 
 $$
-\Psi(\vec{r}, t) = \int d 
+\Psi_{\vec{k}'}(\vec{r}, t) = u_{\vec{k}'}(\vec{r}) \mathrm{e}^{\mathrm{i} \left(\vec{k}' \cdot \vec{r} - \textcolor{orange}{\frac{E(\vec{k}')}{\hbar}} t \right)}
+$$
+
+其中 $\vec{k}' = \vec{k}_0 + \vec{k}$，$\vec{k}$ 限制在 $[-\frac{\Delta}{2}, \frac{\Delta}{2}]$ 范围内。在 $\vec{k}_0$ 附近展开：$E(\vec{k}') = E(\vec{k}_0) + \vec{k} \cdot \left(\nabla_{\vec{k}} E \right)_{\vec{k}_0}$
+
+叠加得波包
+
+$$
+\begin{aligned}
+    \Psi(\vec{r}, t) &= \int_{-\Delta/2}^{\Delta/2} \mathrm{d}^3 k \, \Psi_{\vec{k}'}(\vec{r}, t) \\
+    &\approx u_{\vec{k}_0}(\vec{r}) \mathrm{e}^{\mathrm{i} \left( \vec{k}_0 \cdot \vec{r} - \frac{E(\vec{k}_0)}{\hbar} t \right)} \cdot \int_{-\Delta/2}^{\Delta/2} \mathrm{d}^3 k \, \mathrm{e}^{\mathrm{i} \vec{k} \cdot \bigg[ \vec{r} - \frac{\Big(\nabla_{\vec{k}} E\Big)_{\vec{k}_0}}{\hbar} t \bigg]}
+\end{aligned}
 $$
 
 积分得
@@ -47,7 +56,7 @@ $$
 $$
 \begin{aligned}
     \vec{F} \cdot \vec{v}_k dt &= dE \quad \text{(功能原理：做功导致能量变化)} \\
-    &= (\nabla_{\vec{k}} E) \cdot d\vec{k} = \hbar \vec{v}_k \cdot d\vec{k} \\
+    dE &= (\nabla_{\vec{k}} E) \cdot d\vec{k} = \hbar \vec{v}_k \cdot d\vec{k} \\
     &\implies \left( \vec{F} - \hbar \frac{d\vec{k}}{dt} \right) \cdot \vec{v}_k dt = 0
 \end{aligned}
 $$

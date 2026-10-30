@@ -261,6 +261,11 @@ nav:
       - "电磁场的能/动量及其守恒定律": "Physics/电动力学/Lec22.md"
       - "电磁势及其运动方程": "Physics/电动力学/Lec23.md"
       - "平面电磁波": "Physics/电动力学/Lec24.md"
+      - "球面电磁波": "Physics/电动力学/Lec25.md"
+      - "球面电磁波中的能量传输": "Physics/电动力学/Lec26.md"
+      - "辐射": "Physics/电动力学/Lec27.md"
+      - "电磁波的推迟格林函数": "Physics/电动力学/Lec28.md"
+      - "任意带电质点的电磁辐射": "Physics/电动力学/Lec30.md"
 
     - 固体物理:
       - "Physics/固体物理/index.md"
@@ -302,12 +307,28 @@ nav:
       - "爱因斯坦场方程": "Physics/广义相对论/Lec08.md"
       - "对称性与守恒律": "Physics/广义相对论/Lec09.md"
       - "史瓦西度规，水星进动": "Physics/广义相对论/Lec10.md"
+      - "黑洞": "Physics/广义相对论/Lec16.md"
 
 
     - 热力学与统计物理:
-      - "09-24": "Physics/热力学统计/9_24.md"
-      - "10-15": "Physics/热力学统计/10_15.md"
+      - "Physics/热力学与统计物理/index.md"
+      - "绪论": "Physics/热力学与统计物理/Lec00.md"
+      - "前置知识": "Physics/热力学与统计物理/Ch1.md"
+      - "气体动理学": "Physics/热力学与统计物理/Ch2.md"
+      - "输运与热扩散": "Physics/热力学与统计物理/Ch3.md"
+      - "热力学第一定律": "Physics/热力学与统计物理/Ch4.md"
+      - "热力学第二定律": "Physics/热力学与统计物理/Ch5.md"
+      - "热力学的实际应用": "Physics/热力学与统计物理/Ch6.md"
+      # - "09-24": "Physics/热力学与统计物理/9_24.md"
+      # - "10-15": "Physics/热力学与统计物理/10_15.md"
 
+    - 非线性动力学与斑图动力学简介:
+      - "Physics/非线性动力学/index.md"
+      - "Introduction": "Physics/非线性动力学/Lec00.md"
+      - "Quantitative Formulation": "Physics/非线性动力学/Lec01.md"
+      - "Dynamical systems with finite number of DOF": "Physics/非线性动力学/Lec02.md"
+      - "Linear stability analysis of fixed points": "Physics/非线性动力学/Lec03.md"
+      - "Nonlinear Analysis & Normal forms": "Physics/非线性动力学/Lec04.md"
 
   - 数理方法:
     - "MathPhy/index.md"
@@ -538,6 +559,9 @@ nav:
       - "Lec 11: Plate Element": "Others/FEM/Lec11.md"
       - "Lec 12: Nonlinearity": "Others/FEM/Lec12.md"
       - "Lec 13: Thermal Stress": "Others/FEM/Lec13.md"
+      - "Lec 14: Heat Transfer": "Others/FEM/Lec14.md"
+      - "Lec 15: Dynamic Analysis": "Others/FEM/Lec15.md"
+      - "Lec 16: Weighted Residual Method": "Others/FEM/Lec16.md"
     - 计算流体力学:
       - "Others/CFD/index.md"
       - "Chapter 1: Philosophy of CFD": "Others/CFD/Lec01.md"
@@ -572,9 +596,11 @@ nav:
       - "第四章 离散时间信号的频域分析": "Others/信号与系统/Ch4.md"
       - "第五章 采样定理": "Others/信号与系统/Ch5.md"
       - "第六章 Laplace 变换": "Others/信号与系统/Ch6.md"
+      - "第七章 Z 变换": "Others/信号与系统/Ch7.md"
     - Innovative Design Hub:
       - "Others/Innovative Design Hub/index.md"
       - "Introduction": "Others/Innovative Design Hub/Lec01.md"
+      - "Fatigue": "Others/Innovative Design Hub/Lec02.md"
     - 断裂力学基础:
       - "Others/断裂力学基础/index.md"
       - "绪论": "Others/断裂力学基础/Lec00.md"

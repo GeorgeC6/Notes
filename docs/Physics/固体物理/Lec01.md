@@ -34,7 +34,11 @@ $$
 d p = F dt
 $$
 
+$dt$ 时间内，电子有 $dt/\tau$ 的概率发生碰撞（恢复热运动速度），未碰撞几率为 $1 - dt/\tau$. 故 $t + dt$ 时刻的平均动量为
 
+$$
+p(t + dt) = \left(1 - \frac{dt}{\tau}\right) \Big[p(t) + F(t) dt \Big] + \frac{dt}{\tau} \cdot 0
+$$
 
 得到运动方程
 
@@ -42,7 +46,7 @@ $$
 \frac{d p(t)}{d t} = - \frac{p(t)}{\tau} + F(t)
 $$
 
-平衡后达到稳定速度，即漂移速度（drift velocity）$v_d$：
+平衡后达到稳定速度，即**漂移速度**（drift velocity）$v_d$：
 
 $$
 \frac{dp}{dt} = 0 \implies v_d = - \frac{e \tau}{m} E
@@ -65,6 +69,7 @@ $$
 
 !!! summary "思考总结"
     1.  电导率的公式里只有 $\tau$ 未知，其他参数都已知，因此总能符合实验数据，太随机
+    2.  实验：温度不高时，$\sigma \sim T^{-1}$. 而 Drude 模型预测 $\sigma \sim T^{-1/2}$
 
 
 !!! success "Drude 模型“成功”解释了 Wiedemann-Franz 定律"

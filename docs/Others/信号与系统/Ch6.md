@@ -49,3 +49,57 @@ $$
     收敛域{++至少++}为 $R_1 \cap R_2$（可能极点会被消除，收敛域会扩大）
 2.  时移
     记 $x(t) \overset{\mathcal{L}}{\longrightarrow} X(s)$，收敛域为 $R$，则
+
+
+
+!!! tip "ODE 的三种表示"
+    输入信号 $x(t)$，输出信号 $y(t)$，满足二阶线性常微分方程，可以有三种表示方式。
+
+    1.  公式
+
+        $$
+        a_2 y'' + a_1 y' + a_0 y = b_2 x'' + b_1 x' + b_0 x
+        $$
+
+        可以引入一个中间变量 $w(t)$ 来表示 $x(t)$ 和 $y(t)$，使得上式自动成立：
+
+        $$
+        x(t) = a_2 w'' + a_1 w' + a_0 w, \quad y(t) = b_2 w'' + b_1 w' + b_0 w
+        $$
+
+    2.  拉氏变换
+
+        $$
+        H(s) = \frac{Y(s)}{X(s)} = \frac{b_2 s^2 + b_1 s + b_0}{a_2 s^2 + a_1 s + a_0}
+        $$
+
+    3.  系统框图
+
+## 系统框图表示
+
+### 串联、并联
+
+- 串联对应 $H(s) = \frac{1}{(s - s_1)(s - s_2)} = \frac{1}{s - s_1} \cdot \frac{1}{s - s_2}$
+- 并联对应 $H(s) = \frac{1}{s - s_1} + \frac{1}{s - s_2}$
+
+
+!!! note "系统的特征函数"
+    记 $x(t) \xrightarrow{H(s)} y(t)$，若 $x(t) = e^{s_0 t}$，则 $y(t) = H(s_0) e^{s_0 t}$.
+    
+    ---
+
+    证明：
+
+    $$
+    \begin{aligned}
+        y(t) &= x(t) \ast h(t) = \int_{-\infty}^{\infty} h(\tau) x(t - \tau) d\tau = \int_{-\infty}^{\infty} h(\tau) e^{s_0 (t - \tau)} d\tau \\
+        &= e^{s_0 t} \int_{-\infty}^{\infty} h(\tau) e^{-s_0 \tau} d\tau = e^{s_0 t} H(s_0)
+    \end{aligned}
+    $$
+
+    特例：$s_0 = 0$，若 $0$ 在 $H(s)$ 的收敛域内，则得到直流信号的响应：
+
+    $$
+    1 \xrightarrow{H(s)} H(0)
+    $$
+

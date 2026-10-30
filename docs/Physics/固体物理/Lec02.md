@@ -59,9 +59,21 @@ $$
     得到
 
     $$
-    \mathrm{e}^{i k_x L} = \mathrm{e}^{i k_y L} = \mathrm{e}^{i k_z L} = 1 \implies (k_x, k_y, k_z) = \frac{2 \pi}{L} (n_x, n_y, n_z)
+    \mathrm{e}^{i k_x L} = \mathrm{e}^{i k_y L} = \mathrm{e}^{i k_z L} = 1 \implies (k_x, k_y, k_z) = \frac{2 \pi}{L} n, \quad n \in \mathbb{Z}
     $$
 
 ### 状态密度-波矢空间
 
-目前还不知道各个 $k$ 有多少电子占据
+目前还不知道各个 $k$ 状态有多少电子占据。在波矢空间（即 $k$ 空间）中，分立的 $k$ 值代表一个个点，间距为 $\Delta k = \frac{2 \pi}{L}$，每个点占据的体积为
+
+$$
+(\Delta k)^3 = \left( \frac{2 \pi}{L} \right)^3 = \frac{8 \pi^3}{V}
+$$
+
+所以单位体积内的 $k$ 状态数为
+
+$$
+D(k) = \frac{1}{(\Delta k)^3} = \frac{V}{8 \pi^3}
+$$
+
+此即为 $k$ 空间的**状态密度**。

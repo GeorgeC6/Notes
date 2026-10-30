@@ -1,13 +1,23 @@
 window.MathJax = {
+  loader: {
+    load: [
+      "[tex]/boldsymbol",
+      "[tex]/braket",
+      "[tex]/cancel"
+    ]
+  },
   tex: {
+    packages: {
+      "[+]": ["boldsymbol", "braket", "cancel"]
+    },
     inlineMath: [["$", "$"], ["\\(", "\\)"]],
     displayMath: [["$$", "$$"], ["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
+    processRefs: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
+    ignoreHtmlClass: "mathjax_ignore"
   },
   // output: {
   //   font: 'mathjax-stix2'
